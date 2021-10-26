@@ -1,0 +1,53 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block content %}
+<style>
+  .bottom-three {
+     margin-bottom: 3cm;
+  }
+      div.r {
+  text-align: right;
+}
+</style>
+
+<p>
+    You have finished the Guessing the Secret Number Game!
+</p>
+
+{% if player.role == 'Observer' %}
+<p>
+    You have a total of <b>{{ total_point_payoff_observer }} points</b>.
+</p>
+
+<p>
+    Remember that the points are converted into US dollars at the ratio of <b>250:1 (250 points =$1)</b> and rounded up
+    to the nearest (non-negative) dollar amount.
+</p>
+
+{% else %}
+<p>
+    You have a total of <b>{{ total_point_payoff_guesser }} points</b>.
+</p>
+
+<p>
+    Remember that the points are converted into US dollars at the ratio of <b>430:1 (430 points =$1)</b> and rounded up
+    to the nearest (non-negative) dollar amount.
+</p>
+
+{% endif %}
+
+<p>
+    Therefore, your earnings from this part is equal to <b>{{ player.participant.payoff }}</b>.
+</p>
+<p>Click Next to proceed.</p>
+<div class="r">
+    {% next_button %}
+    </div>
+{% endblock %}
+
+

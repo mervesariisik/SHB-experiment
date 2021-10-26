@@ -1,0 +1,31 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Thank You!
+{% endblock %}
+
+{% block content %}
+<style>
+    div.r {
+  text-align: right;
+}
+</style>
+<p>
+    You have now reached to the end of the experiment. Thank you very much for participating!
+</p>
+
+
+<p>
+    Please <b>click Next to be redirected to prolific.co</b>. This will verify that you have completed the experiment and let us pay you through the system.
+
+</p>
+<p>
+    You can leave the Zoom room.
+</p>
+<p>Click Next to proceed.</p>
+<div class="r">
+    {% next_button %}
+</div>
+
+{% endblock %}

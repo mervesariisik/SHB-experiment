@@ -1,0 +1,78 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Part 1: Guessing the Secret Number
+{% endblock %}
+
+{% block content %}
+<style>
+    #rcorners {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 70%;
+        height: 30px;
+}
+        div.b {
+  text-indent: 30px;
+}
+</style>
+
+<p>
+Each round will proceed as follows:
+    <ol>
+    <p>
+    <li><u>For each Observer-Guesser pair</u> the computer will send a <i>"secret number"</i> and a <i>"color
+        number"</i> to the <b>Observer</b>.
+    </li>
+    </p>
+    <p>
+         <div id="rcorners">
+    <div class="b">
+        The <u>sum</u> of the <i>secret number</i> and the <i>color number</i> generates a
+        <i>"message"</i>. </i>
+        </div>
+         </div>
+    </p>
+
+    <p>
+
+    <li>The <b>Observer</b> will then decide whether or not to send the <i>message</i> to the Guesser. <u>Note that the
+    Guesser will never see the <i>secret number</i> or the <i>color number</i></u>.
+</li>
+    </p>
+
+    <ul>
+    <li>
+        If <i>message</i> is sent: the <b>Guesser</b> will only see the <i>message</i>.
+    </li>
+    <p>
+    <li>
+        If <i>message</i> is not sent: the <b>Guesser</b> will only see that the Observer did not send a <i>message</i>.
+    </li>
+    </p>
+
+</ul>
+
+
+    <p>
+    <li>The <b>Guesser</b> will then guess the value of the secret number, concluding the round.</li>
+    </p>
+
+
+</ol>
+</p>
+
+<p>Click Next to proceed.</p>
+<div class="r">
+<p>
+    {% next_button %}
+</p>
+        </div>
+<style>
+                div.r {
+  text-align: right;
+}
+</style>
+
+{% endblock %}

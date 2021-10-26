@@ -1,0 +1,136 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Mark "present" if accepted into the main Zoom room. <br>
+Click Next to randomize them into rooms!
+{% endblock %}
+
+{% block content %}
+<style>
+     table, td, th {
+  border: 1px solid #696969;
+}
+    table {
+  border-collapse: collapse;
+}
+    table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+
+<p>
+<b>Select "Yes" for those who are accepted into the Zoom meeting:</b>
+
+    <table border=1 class="center">
+
+  <tbody>
+  <tr>
+        <td> (P1) {{ p1_prolific_id }}</td>
+        <td> {% formfield group.p1 %} </td>
+        <td> (P2) {{ p2_prolific_id }}</td>
+        <td> {% formfield group.p2 %} </td>
+        <td> (P3) {{ p3_prolific_id }}</td>
+        <td> {% formfield group.p3 %} </td>
+
+    </tr>
+  <tr>
+        <td> (P4) {{ p4_prolific_id }}</td>
+        <td> {% formfield group.p4 %} </td>
+        <td> (P5) {{ p5_prolific_id }}</td>
+        <td> {% formfield group.p5 %} </td>
+        <td> (P6) {{ p6_prolific_id }}</td>
+        <td> {% formfield group.p6 %} </td>
+    </tr>
+  <tr>
+        <td> (P7) {{ p7_prolific_id }}</td>
+        <td> {% formfield group.p7 %} </td>
+        <td> (P8) {{ p8_prolific_id }}</td>
+        <td> {% formfield group.p8 %} </td>
+        <td> (P9) {{ p9_prolific_id }}</td>
+        <td> {% formfield group.p9 %} </td>
+    </tr>
+  <tr>
+        <td> (P10) {{ p10_prolific_id }}</td>
+        <td> {% formfield group.p10 %} </td>
+        <td> (P11) {{ p11_prolific_id }}</td>
+        <td> {% formfield group.p11 %} </td>
+        <td> (P12) {{ p12_prolific_id }}</td>
+        <td> {% formfield group.p12 %} </td>
+    </tr>
+  <tr>
+        <td> (P13) {{ p13_prolific_id }}</td>
+        <td> {% formfield group.p13 %} </td>
+        <td> (P14) {{ p14_prolific_id }}</td>
+        <td> {% formfield group.p14 %} </td>
+        <td> (P15) {{ p15_prolific_id }}</td>
+        <td> {% formfield group.p15 %} </td>
+    </tr>
+  <tr>
+        <td> (P16) {{ p16_prolific_id }}</td>
+        <td> {% formfield group.p16 %} </td>
+        <td> (P17) {{ p17_prolific_id }}</td>
+        <td> {% formfield group.p17 %} </td>
+        <td> (P18) {{ p18_prolific_id }}</td>
+        <td> {% formfield group.p18 %} </td>
+    </tr>
+  <tr>
+        <td> (P19) {{ p19_prolific_id }}</td>
+        <td> {% formfield group.p19 %} </td>
+        <td> (P20) {{ p20_prolific_id }}</td>
+        <td> {% formfield group.p20 %} </td>
+        <td> (P21) {{ p21_prolific_id }}</td>
+        <td> {% formfield group.p21 %} </td>
+    </tr>
+  <tr>
+        <td> (P22) {{ p22_prolific_id }}</td>
+        <td> {% formfield group.p22 %} </td>
+        <td> (P23) {{ p23_prolific_id }}</td>
+        <td> {% formfield group.p23 %} </td>
+        <td> (P24) {{ p24_prolific_id }}</td>
+        <td> {% formfield group.p24 %} </td>
+    </tr>
+  <tr>
+        <td> (P25) {{ p25_prolific_id }}</td>
+        <td> {% formfield group.p25 %} </td>
+        <td> (P26) {{ p26_prolific_id }}</td>
+        <td> {% formfield group.p26 %} </td>
+        <td> (P27) {{ p27_prolific_id }}</td>
+        <td> {% formfield group.p27 %} </td>
+    </tr>
+  <tr>
+        <td> (P28) {{ p28_prolific_id }}</td>
+        <td> {% formfield group.p28 %} </td>
+        <td> (P29) {{ p29_prolific_id }}</td>
+        <td> {% formfield group.p29 %} </td>
+        <td> (P30) {{ p30_prolific_id }}</td>
+        <td> {% formfield group.p30 %} </td>
+    </tr>
+  <tr>
+        <td> (P31) {{ p31_prolific_id }}</td>
+        <td> {% formfield group.p31 %} </td>
+        <td> (P32) {{ p32_prolific_id }}</td>
+        <td> {% formfield group.p32 %} </td>
+        <td> (P33) {{ p33_prolific_id }}</td>
+        <td> {% formfield group.p33 %} </td>
+    </tr>
+  <tr>
+        <td> (P34) {{ p34_prolific_id }}</td>
+        <td> {% formfield group.p34 %} </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+    </tr>
+
+  </tbody>
+</table>
+</p>
+
+<p>
+    <b>CLICK NEXT TO RANDOMIZE THEM INTO ROOMS!</b>
+</p>
+{% next_button %}
+{% endblock %}

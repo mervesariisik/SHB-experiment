@@ -1,0 +1,457 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+  Example 1 (continued)
+{% endblock %}
+
+{% block content %}
+
+<style>
+    * {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+    height: 800px;
+}
+    table, td, th {
+  border: 1px solid #696969;
+}
+    table {
+  border-collapse: collapse;
+}
+img {
+        width: 150px;
+        height: 150px;
+    }
+#col {
+  column-count: 2;
+}
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Clear floats after the columns */
+#rcornersmessages {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 100%;
+    height: 100%;
+}
+    #rcornerspayoffreminder {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 100%;
+        height: 190px;
+}
+#rcornerspayoffs {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 100%;
+    height: 220px;
+
+}
+     caption { caption-side:top; }
+
+    #rcorners3 {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 100%;
+  height: 350px;
+}
+        #rcorners3a {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 100%;
+  height: 160px;
+}
+    #rcorners {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 90%;
+  height: 27px;
+}
+div.a {
+    font-size:13.5px;
+}
+    div.b {
+  text-indent: 20px;
+}
+    div.c {
+  text-indent: 80px;
+}
+    div.d {
+  text-indent: 90px;
+}
+        p.ex1 {
+  margin-top: 30px;
+}
+        p.ex2 {
+  margin-top: 50px;
+}
+     p.ex3 {
+  margin-top: 10px;
+}
+     p.ex4 {
+  margin-top: 60px;
+}
+     p.ex5 {
+  margin-top: 70px;
+}
+    div.r {
+  text-align: right;
+}
+    div.absolute{
+        position: absolute;
+        bottom: 1px;
+    }
+    div.container1stcol{
+        height: 100%;
+        position: relative;
+    }
+     hr.rounded {
+  border-top: 2px solid #bbb;
+  border-radius: 5px;
+}
+
+</style>
+
+<div class="column">
+<div class="container1stcol">
+    <p id="example">
+        The Observer from Forest color group observes:
+    <ul>
+    <li><b><i>secret number</i>: 8</b> </li>
+    <li><i>(color number)</i>: (+2)</li>
+</ul>
+    </p>
+    <p>
+    which together add up to generate:
+    <ul>
+    <li>
+        Message 10
+    </li>
+</ul>
+</p>
+
+
+    <p>
+    <hr class="rounded">
+    </p>
+    <p>
+        Suppose the Observer chooses to send the Message.
+    </p>
+    <p>
+        The Guesser reads:
+    </p>
+    <p>
+        "The Observer from Forest color group -
+    </p>
+    <p style="text-align:center;">
+        The Message is 10."
+    </p>
+    <hr class="rounded">
+
+    <p>
+    Suppose the Guesser considers <b>GUESS 8.5</b> or <b>GUESS 9</b>.
+</p>
+    <p>
+    <div id="col">
+
+    {% formfield player.ex1_observer_pref %}
+
+    {% formfield player.ex1_guesser_pref %}
+    </div>
+
+
+Click Next to submit.
+    </p>
+<div class="absolute">
+    <div id="rcornerspayoffreminder">
+        <div class="a">
+        <div class="b">
+            <p class="ex1">
+                   Remember:
+            </p>
+
+            </div>
+        <ul>
+            <p>
+            <li>Observer's payoff is <u>higher when the <b>GUESS</b> is higher</u>.
+</li>
+    </p>
+    <p>
+            <li>Guesser's payoff is <u>higher when the <b>GUESS</b> is closer to the <b>secret number</b></u>.</li>
+    </p>
+</ul>
+            </div>
+            <div class="c">
+                <span style="background-color: #FFFF00">Scroll down to see the payoff tables</span>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+</div>
+
+<div class="column">
+
+        </div>
+
+<div class="r">
+<p class="ex5">
+    {% next_button %}
+     </p>
+</div>
+
+<div id="rcornerspayoffs">
+    <p>
+<div id="col">
+
+     <div class="a">
+<table border=1 width=450>
+  <thead>
+    <tr>
+      <td bgcolor="#d3d3d3"> OBSERVER POINT </td>
+      <th colspan="11"; style="text-align:center">GUESS:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td bgcolor="#d3d3d3"> PAYOFFS </td>
+      <th scope="row"; style="text-align:center">5</th>
+      <th scope="row"; style="text-align:center">5.5</th>
+      <th scope="row"; style="text-align:center">6</th>
+      <th scope="row"; style="text-align:center">6.5</th>
+      <th scope="row"; style="text-align:center">7</th>
+      <th scope="row"; style="text-align:center">7.5</th>
+      <th scope="row"; style="text-align:center">8</th>
+      <th scope="row"; style="text-align:center">8.5</th>
+      <th scope="row"; style="text-align:center">9</th>
+      <th scope="row"; style="text-align:center">9.5</th>
+      <th scope="row"; style="text-align:center">10</th>
+    </tr>
+    <tr>
+      <th>secret number 5</th>
+      <td style="text-align:right">-33</td>
+      <td style="text-align:right">-13</td>
+      <td style="text-align:right">6</td>
+      <td style="text-align:right">23</td>
+      <td style="text-align:right">40</td>
+      <td style="text-align:right">56</td>
+      <td style="text-align:right">70</td>
+      <td style="text-align:right">84</td>
+      <td style="text-align:right">95</td>
+      <td style="text-align:right">104</td>
+      <td style="text-align:right">110</td>
+    </tr>
+    <tr>
+      <th scope="row">secret number 6</th>
+      <td style="text-align:right">-33</td>
+      <td style="text-align:right">-13</td>
+      <td style="text-align:right">6</td>
+      <td style="text-align:right">23</td>
+      <td style="text-align:right">40</td>
+      <td style="text-align:right">56</td>
+      <td style="text-align:right">70</td>
+      <td style="text-align:right">84</td>
+      <td style="text-align:right">95</td>
+      <td style="text-align:right">104</td>
+      <td style="text-align:right">110</td>
+    </tr>
+  <tr>
+      <th scope="row">secret number 7</th>
+      <td style="text-align:right">-33</td>
+      <td style="text-align:right">-13</td>
+      <td style="text-align:right">6</td>
+      <td style="text-align:right">23</td>
+      <td style="text-align:right">40</td>
+      <td style="text-align:right">56</td>
+      <td style="text-align:right">70</td>
+      <td style="text-align:right">84</td>
+      <td style="text-align:right">95</td>
+      <td style="text-align:right">104</td>
+      <td style="text-align:right">110</td>
+    </tr>
+  <tr>
+      <th scope="row">secret number 8</th>
+      <td style="text-align:right">-33</td>
+      <td style="text-align:right">-13</td>
+      <td style="text-align:right">6</td>
+      <td style="text-align:right">23</td>
+      <td style="text-align:right">40</td>
+      <td style="text-align:right">56</td>
+      <td style="text-align:right">70</td>
+      <td style="text-align:right">84</td>
+      <td style="text-align:right">95</td>
+      <td style="text-align:right">104</td>
+      <td style="text-align:right">110</td>
+    </tr>
+  <tr>
+      <th scope="row">secret number 9</th>
+      <td style="text-align:right">-33</td>
+      <td style="text-align:right">-13</td>
+      <td style="text-align:right">6</td>
+      <td style="text-align:right">23</td>
+      <td style="text-align:right">40</td>
+      <td style="text-align:right">56</td>
+      <td style="text-align:right">70</td>
+      <td style="text-align:right">84</td>
+      <td style="text-align:right">95</td>
+      <td style="text-align:right">104</td>
+      <td style="text-align:right">110</td>
+    </tr>
+  <tr>
+      <th scope="row">secret number 10</th>
+      <td style="text-align:right">-33</td>
+      <td style="text-align:right">-13</td>
+      <td style="text-align:right">6</td>
+      <td style="text-align:right">23</td>
+      <td style="text-align:right">40</td>
+      <td style="text-align:right">56</td>
+      <td style="text-align:right">70</td>
+      <td style="text-align:right">84</td>
+      <td style="text-align:right">95</td>
+      <td style="text-align:right">104</td>
+      <td style="text-align:right">110</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+
+
+        <div class="a">
+<table border=1 width=460>
+  <thead>
+    <tr>
+        <td bgcolor="#d3d3d3"> GUESSER POINT </td>
+      <th colspan="11"; style="text-align:center">GUESS:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td bgcolor="#d3d3d3"> PAYOFFS </td>
+      <th scope="row"; style="text-align:center">5</th>
+      <th scope="row"; style="text-align:center">5.5</th>
+      <th scope="row"; style="text-align:center">6</th>
+      <th scope="row"; style="text-align:center">6.5</th>
+      <th scope="row"; style="text-align:center">7</th>
+      <th scope="row"; style="text-align:center">7.5</th>
+      <th scope="row"; style="text-align:center">8</th>
+      <th scope="row"; style="text-align:center">8.5</th>
+      <th scope="row"; style="text-align:center">9</th>
+      <th scope="row"; style="text-align:center">9.5</th>
+      <th scope="row"; style="text-align:center">10</th>
+    </tr>
+    <tr>
+      <th>secret number 5</th>
+      <td style="text-align:right">110</td>
+      <td style="text-align:right">104</td>
+      <td style="text-align:right">95</td>
+      <td style="text-align:right">84</td>
+      <td style="text-align:right">70</td>
+      <td style="text-align:right">56</td>
+      <td style="text-align:right">40</td>
+      <td style="text-align:right">23</td>
+      <td style="text-align:right">6</td>
+      <td style="text-align:right">-13</td>
+      <td style="text-align:right">-33</td>
+    </tr>
+    <tr>
+      <th scope="row">secret number 6</th>
+      <td style="text-align:right">95</td>
+      <td style="text-align:right">104</td>
+      <td style="text-align:right">110</td>
+      <td style="text-align:right">104</td>
+      <td style="text-align:right">95</td>
+      <td style="text-align:right">84</td>
+      <td style="text-align:right">70</td>
+      <td style="text-align:right">56</td>
+      <td style="text-align:right">40</td>
+      <td style="text-align:right">23</td>
+      <td style="text-align:right">6</td>
+    </tr>
+  <tr>
+      <th scope="row">secret number 7</th>
+      <td style="text-align:right">70</td>
+      <td style="text-align:right">84</td>
+      <td style="text-align:right">95</td>
+      <td style="text-align:right">104</td>
+      <td style="text-align:right">110</td>
+      <td style="text-align:right">104</td>
+      <td style="text-align:right">95</td>
+      <td style="text-align:right">84</td>
+      <td style="text-align:right">70</td>
+      <td style="text-align:right">56</td>
+      <td style="text-align:right">40</td>
+    </tr>
+  <tr>
+      <th scope="row">secret number 8</th>
+      <td style="text-align:right">40</td>
+      <td style="text-align:right">56</td>
+      <td style="text-align:right">70</td>
+      <td style="text-align:right">84</td>
+      <td style="text-align:right">95</td>
+      <td style="text-align:right">104</td>
+      <td style="text-align:right">110</td>
+      <td style="text-align:right">104</td>
+      <td style="text-align:right">95</td>
+      <td style="text-align:right">84</td>
+      <td style="text-align:right">70</td>
+    </tr>
+  <tr>
+      <th scope="row">secret number 9</th>
+      <td style="text-align:right">6</td>
+      <td style="text-align:right">23</td>
+      <td style="text-align:right">40</td>
+      <td style="text-align:right">56</td>
+      <td style="text-align:right">70</td>
+      <td style="text-align:right">84</td>
+      <td style="text-align:right">95</td>
+      <td style="text-align:right">104</td>
+      <td style="text-align:right">110</td>
+      <td style="text-align:right">104</td>
+      <td style="text-align:right">95</td>
+    </tr>
+  <tr>
+      <th scope="row">secret number 10</th>
+      <td style="text-align:right">-33</td>
+      <td style="text-align:right">-13</td>
+      <td style="text-align:right">6</td>
+      <td style="text-align:right">23</td>
+      <td style="text-align:right">40</td>
+      <td style="text-align:right">56</td>
+      <td style="text-align:right">70</td>
+      <td style="text-align:right">84</td>
+      <td style="text-align:right">95</td>
+      <td style="text-align:right">104</td>
+      <td style="text-align:right">110</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    </div>
+    </p>
+</div>
+
+
+
+        <div class="a">
+<table width=400>
+
+</table>
+</div>
+</div>
+
+
+
+{% endblock %}

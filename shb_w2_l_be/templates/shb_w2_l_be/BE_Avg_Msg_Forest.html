@@ -1,0 +1,335 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Question Progress: Question 3 of 3
+{% endblock %}
+
+{% block content %}
+<style>
+
+    .column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+        table, td, th {
+  border: 1px solid #696969;
+}
+    table {
+  border-collapse: collapse;
+}
+        div.e {
+  text-indent: 200px;
+}
+            #rcorners {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 90%;
+  height: 27px;
+}
+
+        #rcornersmessages {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 100%;
+}
+        #rcornerspayoffreminder {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 100%;
+        height: 190px;
+}
+#rcornerspayoffs {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 100%;
+
+}
+        table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+        div.a {
+    font-size:13.5px;
+}
+            div.b {
+  text-indent: 20px;
+}
+            div.c {
+  text-indent: 80px;
+}
+            div.r {
+  text-align: right;
+}
+            p.ex1 {
+  margin-top: 30px;
+}
+             p.ex3 {
+  margin-top: 10px;
+}
+             p.ex4 {
+  margin-top: 60px;
+}
+             p.ex44 {
+  margin-top: 50px;
+}
+             p.ex444 {
+  margin-top: 22px;
+}
+            p.ex5 {
+  margin-top: 70px;
+}
+    p.ex5bottom {
+        margin-bottom: 10px;
+    }
+              p.ex6 {
+  margin-top: 187px;
+}
+             img {
+        width: 150px;
+        height: 150px;
+    }
+    caption { caption-side:top; }
+#col {
+  column-count: 2;
+}
+</style>
+
+<p id="question">
+    <b>Question:</b> In the <u>1st round</u> of an experiment that was very similar to today's experiment
+    but <u>took place with other participants a few days ago</u>... For Observers from <u>Forest color group</u>, what was
+    the average generated Message? (Please consider all generated Messages,
+    regardless of whether you think the Observer had sent the Message to the Guesser or not.)
+</p>
+<p>
+    (Note that you will earn <b>${{ Constants.dollar_per_ecu_guesser }}</b> for correct answer. Answers that are more
+    than <u>0.05 away from the true values</u> are considered <u>incorrect</u>. True value is the realized value during the
+    first round of the experiment that took place a few days ago.)
+</p>
+
+<div class="column">
+    <p>
+    <i>Your entries can have up to 2 decimal places. (example: 6.75)
+</i>
+</p>
+
+<p>
+{% formfields %}
+</p>
+<p>Click Next to submit.</p>
+
+    <p class="ex444">
+    <div class="r">
+
+    {% next_button %}
+    </div>
+
+    </p>
+</div>
+<div class="column">
+    <div id="rcornersmessages">
+    <div class="a">
+    <p>
+<table border=1 class="center" width=400 height="200">
+  <thead>
+    <tr>
+        <td> </td>
+        <td colspan="6"><center> <b>secret number</b> <span style="font-size: 13px">(color number)</span></center></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td>Message 0: </td>
+        <td scope="row"> <b>5</b> <span style="font-size: 13px">(-5)</span></td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+    </tr>
+    <tr>
+        <td>Message 1:</td>
+        <td scope="row"> <b>5</b> <span style="font-size: 13px">(-4)</span></td>
+        <td scope="row"> <b>6</b> <span style="font-size: 13px">(-5)</span></td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+    </tr>
+    <tr>
+      <td>Message 2:</td>
+        <td scope="row"> <b>5</b> <span style="font-size: 13px">(-3)</span></td>
+        <td scope="row"> <b>6</b> <span style="font-size: 13px">(-4)</span></td>
+        <td scope="row"> <b>7</b> <span style="font-size: 13px">(-5)</span></td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+    </tr>
+  <tr>
+      <td>Message 3:</td>
+      <td scope="row"> <b>5</b> <span style="font-size: 13px">(-2)</span></td>
+      <td scope="row"> <b>6</b> <span style="font-size: 13px">(-3)</span></td>
+      <td scope="row"> <b>7</b> <span style="font-size: 13px">(-4)</span></td>
+      <td scope="row"> <b>8</b> <span style="font-size: 13px">(-5)</span></td>
+      <td bgcolor="#d3d3d3"> </td>
+      <td bgcolor="#d3d3d3"> </td>
+    </tr>
+  <tr>
+      <td>Message 4:</td>
+      <td scope="row"> <b>5</b> <span style="font-size: 13px">(-1)</span></td>
+      <td scope="row"> <b>6</b> <span style="font-size: 13px">(-2)</span></td>
+      <td scope="row"> <b>7</b> <span style="font-size: 13px">(-3)</span></td>
+      <td scope="row"> <b>8</b> <span style="font-size: 13px">(-4)</span></td>
+      <td scope="row"> <b>9</b> <span style="font-size: 13px">(-5)</span></td>
+      <td bgcolor="#d3d3d3"> </td>
+    </tr>
+  <tr>
+      <td>Message 5:</td>
+      <td scope="row"> <b>5</b> <span style="font-size: 13px">(0)</span></td>
+      <td scope="row"> <b>6</b> <span style="font-size: 13px">(-1)</span></td>
+      <td scope="row"> <b>7</b> <span style="font-size: 13px">(-2)</span></td>
+      <td scope="row"> <b>8</b> <span style="font-size: 13px">(-3)</span></td>
+      <td scope="row"> <b>9</b> <span style="font-size: 13px">(-4)</span></td>
+      <td scope="row"> <b>10</b> <span style="font-size: 13px">(-5)</span></td>
+    </tr>
+  <tr>
+      <td>Message 6:</td>
+      <td scope="row"> <b>5</b> <span style="font-size: 13px">(+1)</span></td>
+      <td scope="row"> <b>6</b> <span style="font-size: 13px">(0)</span></td>
+      <td scope="row"> <b>7</b> <span style="font-size: 13px">(-1)</span></td>
+      <td scope="row"> <b>8</b> <span style="font-size: 13px">(-2)</span></td>
+      <td scope="row"> <b>9</b> <span style="font-size: 13px">(-3)</span></td>
+      <td scope="row"> <b>10</b> <span style="font-size: 13px">(-4)</span></td>
+    </tr>
+  <tr>
+      <td>Message 7:</td>
+        <td scope="row"> <b>5</b> <span style="font-size: 13px">(+2)</span></td>
+        <td scope="row"> <b>6</b> <span style="font-size: 13px">(+1)</span></td>
+        <td scope="row"> <b>7</b> <span style="font-size: 13px">(0)</span></td>
+        <td scope="row"> <b>8</b> <span style="font-size: 13px">(-1)</span></td>
+        <td scope="row"> <b>9</b> <span style="font-size: 13px">(-2)</span></td>
+        <td scope="row"> <b>10</b> <span style="font-size: 13px">(-3)</span></td>
+    </tr>
+  <tr>
+      <td>Message 8:</td>
+        <td scope="row"> <b>5</b> <span style="font-size: 13px">(+3)</span></td>
+        <td scope="row"> <b>6</b> <span style="font-size: 13px">(+2)</span></td>
+        <td scope="row"> <b>7</b> <span style="font-size: 13px">(+1)</span></td>
+        <td scope="row"> <b>8</b> <span style="font-size: 13px">(0)</span></td>
+        <td scope="row"> <b>9</b> <span style="font-size: 13px">(-1)</span></td>
+        <td scope="row"> <b>10</b> <span style="font-size: 13px">(-2)</span></td>
+    </tr>
+  <tr>
+      <td>Message 9:</td>
+        <td scope="row"> <b>5</b> <span style="font-size: 13px">(+4)</span></td>
+        <td scope="row"> <b>6</b> <span style="font-size: 13px">(+3)</span></td>
+        <td scope="row"> <b>7</b> <span style="font-size: 13px">(+2)</span></td>
+        <td scope="row"> <b>8</b> <span style="font-size: 13px">(+1)</span></td>
+        <td scope="row"> <b>9</b> <span style="font-size: 13px">(0)</span></td>
+        <td scope="row"> <b>10</b> <span style="font-size: 13px">(-1)</span></td>
+    </tr>
+  <tr>
+      <td>Message 10:</td>
+        <td scope="row"> <b>5</b> <span style="font-size: 13px">(+5)</span></td>
+        <td scope="row"> <b>6</b> <span style="font-size: 13px">(+4)</span></td>
+        <td scope="row"> <b>7</b> <span style="font-size: 13px">(+3)</span></td>
+        <td scope="row"> <b>8</b> <span style="font-size: 13px">(+2)</span></td>
+        <td scope="row"> <b>9</b> <span style="font-size: 13px">(+1)</span></td>
+        <td scope="row"> <b>10</b> <span style="font-size: 13px">(0)</span></td>
+    </tr>
+  <tr>
+      <td>Message 11:</td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td scope="row"> <b>6</b> <span style="font-size: 13px">(+5)</span></td>
+        <td scope="row"> <b>7</b> <span style="font-size: 13px">(+4)</span></td>
+        <td scope="row"> <b>8</b> <span style="font-size: 13px">(+3)</span></td>
+        <td scope="row"> <b>9</b> <span style="font-size: 13px">(+2)</span></td>
+        <td scope="row"> <b>10</b> <span style="font-size: 13px">(+1)</span></td>
+    </tr>
+  <tr>
+      <td>Message 12:</td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td scope="row"> <b>7</b> <span style="font-size: 13px">(+5)</span></td>
+        <td scope="row"> <b>8</b> <span style="font-size: 13px">(+4)</span></td>
+        <td scope="row"> <b>9</b> <span style="font-size: 13px">(+3)</span></td>
+        <td scope="row"> <b>10</b> <span style="font-size: 13px">(+2)</span></td>
+    </tr>
+  <tr>
+      <td>Message 13:</td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td scope="row"> <b>8</b> <span style="font-size: 13px">(+5)</span></td>
+        <td scope="row"> <b>9</b> <span style="font-size: 13px">(+4)</span></td>
+        <td scope="row"> <b>10</b> <span style="font-size: 13px">(+3)</span></td>
+    </tr>
+  <tr>
+      <td>Message 14:</td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td scope="row"> <b>9</b> <span style="font-size: 13px">(+5)</span></td>
+        <td scope="row"> <b>10</b> <span style="font-size: 13px">(+4)</span></td>
+    </tr>
+  <tr>
+      <td>Message 15:</td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td scope="row"> <b>10</b> <span style="font-size: 13px">(+5)</span></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+</p>
+        <p>
+            <div class="a">
+            <center>
+    <div id="rcorners">
+
+        <i>message = <b>secret number</b> + (color number)</i>
+    </div>
+              </center>
+        </p>
+        </div>
+
+        <p class="ex3">
+            <center>
+        <div class="a">
+        <i><b>secret number</b></i> is equally likely to be one of the following:<br> <b>5, 6, 7, 8, 9, 10</b>
+        </p>
+        <p>
+            <i>(color number)</i> is determined by spinning the color group wheel <br> of the Observer:
+        </p>
+        </div>
+        </center>
+
+        </p>
+
+        <center>
+                <div class="a">
+    Forest color group wheel
+                </div>
+            <img src="{% static "shb/forest_five_parenthesis.png" %}" />
+
+
+
+            </center>
+
+
+
+
+        </div>
+
+
+
+
+        </div>
+
+
+{% endblock %}

@@ -1,0 +1,275 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Part 1: Guessing the Secret Number
+{% endblock %}
+
+{% block content %}
+
+<style>
+    #rcorners {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 50%;
+  height: 30px;
+}
+
+        caption { caption-side:top; }
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 500px; /* Should be removed. Only for demonstration */
+}
+    table, td, th {
+  border: 1px solid #696969;
+}
+    table {
+  border-collapse: collapse;
+}
+.bottom-three {
+     margin-bottom: 3cm;
+  }
+p.ex1 {
+  margin-top: 20px;
+}
+
+p.ex2 {
+  margin-top: 105px;
+}
+p.ex3 {
+  margin-top: 30px;
+}
+
+p.ex4 {
+  margin-top: 90px;
+}
+                div.r {
+  text-align: right;
+}
+    </style>
+<ul>
+    <p>
+    <li>The <b><i>secret number</i></b> is one of the following: <b>5, 6, 7, 8, 9, 10</b>.</li>
+    </p>
+    <p>
+<li>
+    The <i>color number</i> can be <u>zero, negative or positive</u>. To differentiate it from the secret number, we put
+    parentheses around the <i>color number</i>. Specifically, it is one of the following:
+    (-5), (-4), (-3), (-2), (-1), (0), (+1), (+2), (+3), (+4), (+5).
+</li>
+    </p>
+    <center>
+    <div id="rcorners">
+
+    <center>
+        <i>Message = <b>secret number</b> + (color number)</i>
+    </center>
+
+        </div>
+    </center>
+</ul>
+<p>
+    Below table shows the list of all possible <i>Messages</i>. Furthermore, it shows the <b><i>secret numbers</i></b>
+    and corresponding <i>(color numbers)</i> that could generate each <i>Message</i>.
+    </p>
+<div class="column">
+    <p>
+<table border=1 width=400 height="400">
+  <thead>
+    <tr>
+        <td> </td>
+        <td colspan="6"><center><b>Secret Number</b> <font size="2">(Color Number)</center></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td>Message 0: </td>
+        <td scope="row"> <b>5</b> <font size="2">(-5)</td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+    </tr>
+    <tr>
+        <td>Message 1:</td>
+        <td scope="row"> <b>5</b> <font size="2">(-4)</td>
+        <td scope="row"> <b>6</b> <font size="2">(-5)</td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+    </tr>
+    <tr>
+      <td>Message 2:</td>
+        <td scope="row"> <b>5</b> <font size="2">(-3)</td>
+        <td scope="row"> <b>6</b> <font size="2">(-4)</td>
+        <td scope="row"> <b>7</b> <font size="2">(-5)</td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+    </tr>
+  <tr>
+      <td>Message 3:</td>
+        <td scope="row"> <b>5</b> <font size="2">(-2)</td>
+        <td scope="row"> <b>6</b> <font size="2">(-3)</td>
+        <td scope="row"> <b>7</b> <font size="2">(-4)</td>
+        <td scope="row"> <b>8</b> <font size="2">(-5)</td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+    </tr>
+  <tr>
+      <td>Message 4:</td>
+        <td scope="row"> <b>5</b> <font size="2">(-1)</td>
+        <td scope="row"> <b>6</b> <font size="2">(-2)</td>
+        <td scope="row"> <b>7</b> <font size="2">(-3)</td>
+        <td scope="row"> <b>8</b> <font size="2">(-4)</td>
+        <td scope="row"> <b>9</b> <font size="2">(-5)</td>
+        <td bgcolor="#d3d3d3"> </td>
+    </tr>
+  <tr>
+      <td>Message 5:</td>
+        <td scope="row"> <b>5</b> <font size="2">(0)</td>
+        <td scope="row"> <b>6</b> <font size="2">(-1)</td>
+        <td scope="row"> <b>7</b> <font size="2">(-2)</td>
+        <td scope="row"> <b>8</b> <font size="2">(-3)</td>
+        <td scope="row"> <b>9</b> <font size="2">(-4)</td>
+        <td scope="row"> <b>10</b> <font size="2">(-5)</td>
+    </tr>
+  <tr>
+      <td>Message 6:</td>
+        <td scope="row"> <b>5</b> <font size="2">(+1)</td>
+        <td scope="row"> <b>6</b> <font size="2">(0)</td>
+        <td scope="row"> <b>7</b> <font size="2">(-1)</td>
+        <td scope="row"> <b>8</b> <font size="2">(-2)</td>
+        <td scope="row"> <b>9</b> <font size="2">(-3)</td>
+        <td scope="row"> <b>10</b> <font size="2">(-4)</td>
+    </tr>
+  <tr>
+      <td>Message 7:</td>
+        <td scope="row"> <b>5</b> <font size="2">(+2)</td>
+        <td scope="row"> <b>6</b> <font size="2">(+1)</td>
+        <td scope="row"> <b>7</b> <font size="2">(0)</td>
+        <td scope="row"> <b>8</b> <font size="2">(-1)</td>
+        <td scope="row"> <b>9</b> <font size="2">(-2)</td>
+        <td scope="row"> <b>10</b> <font size="2">(-3)</td>
+    </tr>
+  <tr>
+      <td>Message 8:</td>
+        <td scope="row"> <b>5</b> <font size="2">(+3)</td>
+        <td scope="row"> <b>6</b> <font size="2">(+2)</td>
+        <td scope="row"> <b>7</b> <font size="2">(+1)</td>
+        <td scope="row"> <b>8</b> <font size="2">(0)</td>
+        <td scope="row"> <b>9</b> <font size="2">(-1)</td>
+        <td scope="row"> <b>10</b> <font size="2">(-2)</td>
+    </tr>
+  <tr>
+      <td>Message 9:</td>
+        <td scope="row"> <b>5</b> <font size="2">(+4)</td>
+        <td scope="row"> <b>6</b> <font size="2">(+3)</td>
+        <td scope="row"> <b>7</b> <font size="2">(+2)</td>
+        <td scope="row"> <b>8</b> <font size="2">(+1)</td>
+        <td scope="row"> <b>9</b> <font size="2">(0)</td>
+        <td scope="row"> <b>10</b> <font size="2">(-1)</td>
+    </tr>
+  <tr>
+      <td>Message 10:</td>
+        <td scope="row"> <b>5</b> <font size="2">(+5)</td>
+        <td scope="row"> <b>6</b> <font size="2">(+4)</td>
+        <td scope="row"> <b>7</b> <font size="2">(+3)</td>
+        <td scope="row"> <b>8</b> <font size="2">(+2)</td>
+        <td scope="row"> <b>9</b> <font size="2">(+1)</td>
+        <td scope="row"> <b>10</b> <font size="2">(0)</td>
+    </tr>
+  <tr>
+      <td>Message 11:</td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td scope="row"> <b>6</b> <font size="2">(+5)</td>
+        <td scope="row"> <b>7</b> <font size="2">(+4)</td>
+        <td scope="row"> <b>8</b> <font size="2">(+3)</td>
+        <td scope="row"> <b>9</b> <font size="2">(+2)</td>
+        <td scope="row"> <b>10</b> <font size="2">(+1)</td>
+    </tr>
+  <tr>
+      <td>Message 12:</td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td scope="row"> <b>7</b> <font size="2">(+5)</td>
+        <td scope="row"> <b>8</b> <font size="2">(+4)</td>
+        <td scope="row"> <b>9</b> <font size="2">(+3)</td>
+        <td scope="row"> <b>10</b> <font size="2">(+2)</td>
+    </tr>
+  <tr>
+      <td>Message 13:</td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td scope="row"> <b>8</b> <font size="2">(+5)</td>
+        <td scope="row"> <b>9</b> <font size="2">(+4)</td>
+        <td scope="row"> <b>10</b> <font size="2">(+3)</td>
+    </tr>
+  <tr>
+      <td>Message 14:</td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td scope="row"> <b>9</b> <font size="2">(+5)</td>
+        <td scope="row"> <b>10</b> <font size="2">(+4)</td>
+    </tr>
+  <tr>
+      <td>Message 15:</td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td scope="row"> <b>10</b> <font size="2">(+5)</td>
+    </tr>
+  </tbody>
+</table>
+</p>
+</div>
+
+<div class="column">
+
+    <p class="ex1">
+
+For example:
+    </p>
+<p class="ex3">
+        <ul>
+
+    <li>
+        when the Message is 1, the <b>secret number</b> could be either of the following: <b>5</b>, <b>6</b>
+    </li>
+</ul>
+    </p>
+    <p class="ex2">
+    <ul>
+    <li>when the Message is 7, the <b>secret number</b> could be either of the following: <b>5</b>, <b>6</b>, <b>7</b>,
+        <b>8</b>, <b>9</b>, <b>10</b>
+    </li>
+    </ul>
+    </p>
+    <p class="ex4">
+        <ul>
+    <li>
+        when the Message is 12, the <b>secret number</b> could be either of the following: <b>7</b>, <b>8</b>, <b>9</b>,
+        <b>10</b>
+    </li>
+</ul>
+    </p>
+
+</div>
+<p>
+<i>Note that this table will <u>also be available on your decision screens</u></i>.</p>
+
+<div class="r">
+{% next_button %}
+</div>
+
+{% endblock %}

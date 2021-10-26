@@ -1,0 +1,49 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Part 1: Guessing the Secret Number
+{% endblock %}
+
+{% block content %}
+<style>
+    hr.rounded {
+  border-top: 2px solid #bbb;
+  border-radius: 5px;
+}
+
+</style>
+
+<p>
+    We will start with "Guessing the Secret Number" Game. You will play <b>{{Constants.num_rounds}} rounds </b> of this
+    game.
+</p>
+<hr class="rounded">
+<p>
+    This game involves two roles: an <b>Observer</b> and a <b>Guesser</b>. Roles are randomly determined before the game
+    begins and will be <u>fixed</u> throughout the entire game. You are <u>equally likely</u> to be assigned to either
+    role. You will see your assigned role when the game begins.
+</p>
+<hr class="rounded">
+<p>
+    <u>Each round</u>, the computer will randomly pair you with a participant in the other role. You will NOT know which
+    participant you are paired up with.
+</p>
+
+<p>
+    Note also that, before the game begins, participants are put into 2 different Zoom breakout rooms based on their
+    randomly assigned roles. Therefore, you will never be paired with a participant from your Zoom breakout room.
+
+<p>Click Next to proceed.</p>
+<div class="r">
+<p>
+    {% next_button %}
+</p>
+        </div>
+<style>
+                div.r {
+  text-align: right;
+}
+</style>
+
+{% endblock %}

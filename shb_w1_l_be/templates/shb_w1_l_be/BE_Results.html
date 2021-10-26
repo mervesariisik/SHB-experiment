@@ -1,0 +1,38 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block content %}
+<style>
+  .bottom-three {
+     margin-bottom: 3cm;
+  }
+   p.ex1 {
+  margin-top: 30px;
+}
+  p.ex5 {
+  margin-top: 70px;
+}
+  div.r {
+  text-align: right;
+}
+</style>
+<p class="ex1">
+    You answered the end of the game question and earned extra <b>{{ belief_payoff }}</b>.
+</p>
+<p class="ex5">
+    Now, you are about to go through three very short additional parts. <br> Let's start with the Lottery Game.
+</p>
+<p>Click Next to proceed.</p>
+<div class="r">
+<p class="ex5">
+    {% next_button %}
+</p>
+</div>
+
+{% endblock %}
+
+

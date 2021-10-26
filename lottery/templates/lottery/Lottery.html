@@ -1,0 +1,170 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Part 2: Lottery Game
+{% endblock %}
+
+{% block content %}
+<style>
+
+    #rcorners2 {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 100%;
+  height: 170px;
+}
+        #rcorners3 {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width:85%;
+  height: 140px;
+}
+                div.a {
+    font-size:13.5px;
+}
+            div.r {
+  text-align: right;
+}
+    div.c {
+  text-indent: 30px;
+}
+    p.ex1 {
+  margin-top: 25px;
+}
+    p.ex2 {
+        margin-top: 40px;
+    }
+    </style>
+
+    <div id="rcorners3">
+    <div class="c">
+        <div class="a">
+    <p>Remember:</p> <p>After you have made all your choices, the computer will pick one Situation at random. In that Situation... </p>
+    <ul>
+        <li>If you chose the <b>Fixed Payoff</b>, you will receive the specified number of points</li>
+        <li>If you chose the <b>50-50 Lottery</b>, you will receive either 40 points or 0 points, each equally likely</li>
+        </ul>
+        </div>
+        </div>
+</div>
+
+
+<p class="ex2">
+    <div style="text-align:center">
+    For each of the 15 situations below, please choose either the 50-50 lottery, or the fixed payoff.
+    </div>
+</p>
+
+<p class="ex2">
+<table border=1 width=900>
+
+    <tr>
+      <th>Situation</th>
+        <th><center>Lottery</center></th>
+        <th><center>Fixed Payoff</center></th>
+        <th><center>I choose...</center></th>
+    </tr>
+  <tbody>
+    <tr>
+        <th>1</th>
+        <td>50% Chance 40 points and 50% of Chance 0 points</td>
+        <td>2.5 points</td>
+        <td>{% formfield player.d1 label=""%}</td>
+    </tr>
+  <tr>
+        <th>2</th>
+        <td>50% Chance 40 points and 50% of Chance 0 points</td>
+        <td>5 points</td>
+        <td>{% formfield player.d2 label=""%}</td>
+    </tr>
+  <tr>
+        <th>3</th>
+        <td>50% Chance 40 points and 50% of Chance 0 points</td>
+        <td>7.5 points</td>
+        <td>{% formfield player.d3 label=""%}</td>
+    </tr>
+  <tr>
+        <th>4</th>
+        <td>50% Chance 40 points and 50% of Chance 0 points</td>
+        <td>10 points</td>
+        <td>{% formfield player.d4 label=""%}</td>
+    </tr>
+  <tr>
+        <th>5</th>
+        <td>50% Chance 40 points and 50% of Chance 0 points</td>
+        <td>12.5 points</td>
+        <td>{% formfield player.d5 label=""%}</td>
+    </tr>
+  <tr>
+        <th>6</th>
+        <td>50% Chance 40 points and 50% of Chance 0 points</td>
+        <td>15 points</td>
+        <td>{% formfield player.d6 label=""%}</td>
+    </tr>
+  <tr>
+        <th>7</th>
+        <td>50% Chance 40 points and 50% of Chance 0 points</td>
+        <td>17.5 points</td>
+        <td>{% formfield player.d7 label=""%}</td>
+    </tr>
+  <tr>
+        <th>8</th>
+        <td>50% Chance 40 points and 50% of Chance 0 points</td>
+        <td>20 points</td>
+        <td>{% formfield player.d8 label=""%}</td>
+    </tr>
+  <tr>
+        <th>9</th>
+        <td>50% Chance 40 points and 50% of Chance 0 points</td>
+        <td>22.5 points</td>
+        <td>{% formfield player.d9 label=""%}</td>
+    </tr>
+  <tr>
+        <th>10</th>
+        <td>50% Chance 40 points and 50% of Chance 0 points</td>
+        <td>25 points</td>
+        <td>{% formfield player.d10 label=""%}</td>
+    </tr>
+  <tr>
+        <th>11</th>
+        <td>50% Chance 40 points and 50% of Chance 0 points</td>
+        <td>27.5 points</td>
+        <td>{% formfield player.d11 label=""%}</td>
+    </tr>
+  <tr>
+        <th>12</th>
+        <td>50% Chance 40 points and 50% of Chance 0 points</td>
+        <td>30 points</td>
+        <td>{% formfield player.d12 label=""%}</td>
+    </tr>
+  <tr>
+        <th>13</th>
+        <td>50% Chance 40 points and 50% of Chance 0 points</td>
+        <td>32.5 points</td>
+        <td>{% formfield player.d13 label=""%}</td>
+    </tr>
+  <tr>
+        <th>14</th>
+        <td>50% Chance 40 points and 50% of Chance 0 points</td>
+        <td>35 points</td>
+        <td>{% formfield player.d14 label=""%}</td>
+    </tr>
+  <tr>
+        <th>15</th>
+        <td>50% Chance 40 points and 50% of Chance 0 points</td>
+        <td>37.5 points</td>
+        <td>{% formfield player.d15 label=""%}</td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p>
+Click Next to submit.
+</p>
+<div class="r">
+    {% next_button %}
+</div>
+
+
+{% endblock %}

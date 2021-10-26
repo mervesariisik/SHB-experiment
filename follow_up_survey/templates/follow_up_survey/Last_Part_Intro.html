@@ -1,0 +1,36 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Part 4: Total Earnings and Follow-up Questions
+{% endblock %}
+
+{% block content %}
+<style>
+       p.ex1 {
+  margin-top: 30px;
+}
+         p.ex5 {
+  margin-top: 70px;
+}
+       div.r {
+  text-align: right;
+}
+</style>
+
+<p class="ex5">
+    In this last part, you will
+    <ul>
+    <li>
+        see your total earnings
+    </li>
+    <li>
+        complete a very brief follow-up survey
+    </li>
+</ul>
+</p>
+<p>Click Next to proceed.</p>
+<div class="r">
+    {% next_button %}
+</div>
+{% endblock %}

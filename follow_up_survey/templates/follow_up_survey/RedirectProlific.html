@@ -1,0 +1,15 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Redirecting to Prolific...
+{% endblock %}
+
+{% block content %}
+
+<script type="text/javascript">
+    let x = js_vars.prolific_redirect;
+    window.location.replace(x)
+</script>
+
+{% endblock %}

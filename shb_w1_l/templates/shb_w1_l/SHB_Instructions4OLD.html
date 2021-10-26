@@ -1,0 +1,120 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Part 1: Guessing the Secret Number
+{% endblock %}
+
+{% block content %}
+
+<style>
+    img {
+        width: 180px;
+        height: 180px;
+    }
+        p.ex1 {
+  margin-top: 25px;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  height: 350px; /* Should be removed. Only for demonstration */
+}
+.parent {
+  text-align: center;
+}
+.parent > ul {
+  display: inline-block;
+}
+                div.r {
+  text-align: right;
+}
+                 hr.rounded {
+  border-top: 2px solid #bbb;
+  border-radius: 5px;
+}
+    p.ex2 {
+  margin-top: 30px;
+}
+        p.ex3 {
+  margin-top: 50px;
+}
+    </style>
+
+<center>
+<p>
+    How is the <b><i>secret number</i></b> determined each round?
+</p>
+    </center>
+    <p class="ex2">
+        Each round, the computer randomly picks the <b><i>secret number</i></b> such that <b>5, 6, 7, 8, 9,
+        10</b> are each <u>equally likely</u> to be selected.
+    </p>
+
+<hr class="rounded">
+
+<center>
+<p>
+    How is the <i>(color number)</i> determined each round?
+</p>
+    </center>
+<p  class="ex2">
+    The selection procedure depends on the "color group" of the Observer. There are two color groups:
+<div class="parent">
+    <ul>
+    <li>
+        Sky color group
+    </li>
+    <li>
+        Forest color group
+    </li>
+</ul>
+</div>
+
+</p>
+<p>
+    Each color group has its own wheel filled with <i>(color numbers): (-5), (-4), (-3), (-2), (-1), (0), (+1), (+2),
+    (+3), (+4), (+5)</i>. <u>Each round and for every Observer</u>, the computer will spin the corresponding wheel to
+    determine the <i>(color number)</i>.
+   </p>
+<p>
+    Note that in today's session, <u>ALL Observers</u> will be assigned to the <u>Forest color group</u>:
+</p>
+<div class="column">
+
+</div>
+
+    <div class="column">
+        <center>
+            <p>
+    Forest color group wheel
+</p>
+    <img src="{% static "shb/forest_five_parenthesis.png" %}" />
+
+            </center>
+        <p>
+        <ul>
+            <li>half of the wheel is filled with: (+5)</li>
+            <li>other half of the half of the wheel is filled with: <br>(-5),
+                (-4), (-3), (-2), (-1), (0), (+1), (+2), (+3), (+4)</li>
+            </ul>
+        </p>
+    </div>
+
+<p class="ex1">
+    <center>
+<i>Above information will <u>also be available on your decision screens</u></i>.
+</center>
+</p>
+
+<p>Click Next to proceed.</p>
+<div class="r">
+{% next_button %}
+</div>
+
+{% endblock %}

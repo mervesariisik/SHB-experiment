@@ -1,0 +1,237 @@
+from otree.api import Currency as c, currency_range
+from ._builtin import Page, WaitPage
+from .models import Constants
+
+
+class BE_Intro_Guesser(Page):
+    def is_displayed(self):
+        return self.participant.vars['shb_role'] == 'Guesser'
+
+class BE_Intro_Observer(Page):
+    def is_displayed(self):
+        return self.participant.vars['shb_role'] == 'Observer'
+
+
+class BE_Avg_Observer_Forest(Page):
+    def is_displayed(self):
+        return self.participant.vars['shb_role'] == 'Observer' and self.participant.vars['S_dist'] == 'Forest'
+
+    form_model = 'player'
+    form_fields = ['w2_avg_guess_p_0', 'w2_avg_guess_p_1', 'w2_avg_guess_p_2', 'w2_avg_guess_p_3', 'w2_avg_guess_p_4',
+                   'w2_avg_guess_p_5', 'w2_avg_guess_p_6', 'w2_avg_guess_p_7', 'w2_avg_guess_p_8', 'w2_avg_guess_p_9',
+                   'w2_avg_guess_p_10', 'w2_avg_guess_p_11', 'w2_avg_guess_p_12', 'w2_avg_guess_p_13',
+                   'w2_avg_guess_p_14', 'w2_avg_guess_p_15']
+
+    timeout_seconds = 210
+
+    def before_next_page(self):
+        p = self.player
+        timeout_happened = self.timeout_happened
+        p_observer_loss = 0
+        import random
+        if timeout_happened:  # we use "timeout_happened" to decide what value gets submitted on user's behalf
+            p.w2_avg_guess_p_0 = round(random.uniform(5,10),2)
+            p.w2_avg_guess_p_1 = round(random.uniform(5,10),2)
+            p.w2_avg_guess_p_2 = round(random.uniform(5,10),2)
+            p.w2_avg_guess_p_3 = round(random.uniform(5,10),2)
+            p.w2_avg_guess_p_4 = round(random.uniform(5,10),2)
+            p.w2_avg_guess_p_5 = round(random.uniform(5,10),2)
+            p.w2_avg_guess_p_6 = round(random.uniform(5,10),2)
+            p.w2_avg_guess_p_7 = round(random.uniform(5,10),2)
+            p.w2_avg_guess_p_8 = round(random.uniform(5,10),2)
+            p.w2_avg_guess_p_9 = round(random.uniform(5,10),2)
+            p.w2_avg_guess_p_10 = round(random.uniform(5,10),2)
+            p.w2_avg_guess_p_11 = round(random.uniform(5,10),2)
+            p.w2_avg_guess_p_12 = round(random.uniform(5,10),2)
+            p.w2_avg_guess_p_13 = round(random.uniform(5,10),2)
+            p.w2_avg_guess_p_14 = round(random.uniform(5,10),2)
+            p.w2_avg_guess_p_15 = round(random.uniform(5,10),2)
+
+            print("<Time Out on Page:'BE_Avg_Observer_Forest'>", "participant label:", p.participant.label,
+                  "participant id in sesh:", p.participant.id_in_session, "automated random answers:",
+                  p.w2_avg_guess_p_0, p.w2_avg_guess_p_1, p.w2_avg_guess_p_2, p.w2_avg_guess_p_3, p.w2_avg_guess_p_4,
+                  p.w2_avg_guess_p_5, p.w2_avg_guess_p_6, p.w2_avg_guess_p_7, p.w2_avg_guess_p_8, p.w2_avg_guess_p_9,
+                  p.w2_avg_guess_p_10, p.w2_avg_guess_p_11, p.w2_avg_guess_p_12, p.w2_avg_guess_p_13,
+                  p.w2_avg_guess_p_14, p.w2_avg_guess_p_15)
+
+        ############################## AVERAGES ##############################
+
+        if Constants.w2_prvs_avg_guess_p_0 - 0.05 <= p.w2_avg_guess_p_0 <= Constants.w2_prvs_avg_guess_p_0 + 0.05:
+            pass
+        else:
+            p_observer_loss += 1
+
+        if Constants.w2_prvs_avg_guess_p_1 - 0.05 <= p.w2_avg_guess_p_1 <= Constants.w2_prvs_avg_guess_p_1 + 0.05:
+            pass
+        else:
+            p_observer_loss += 1
+
+        if Constants.w2_prvs_avg_guess_p_2 - 0.05 <= p.w2_avg_guess_p_2 <= Constants.w2_prvs_avg_guess_p_2 + 0.05:
+            pass
+        else:
+            p_observer_loss += 1
+
+        if Constants.w2_prvs_avg_guess_p_3 - 0.05 <= p.w2_avg_guess_p_3 <= Constants.w2_prvs_avg_guess_p_3 + 0.05:
+            pass
+        else:
+            p_observer_loss += 1
+
+        if Constants.w2_prvs_avg_guess_p_4 - 0.05 <= p.w2_avg_guess_p_4 <= Constants.w2_prvs_avg_guess_p_4 + 0.05:
+            pass
+        else:
+            p_observer_loss += 1
+
+        if Constants.w2_prvs_avg_guess_p_5 - 0.05 <= p.w2_avg_guess_p_5 <= Constants.w2_prvs_avg_guess_p_5 + 0.05:
+            pass
+        else:
+            p_observer_loss += 1
+
+        if Constants.w2_prvs_avg_guess_p_6 - 0.05 <= p.w2_avg_guess_p_6 <= Constants.w2_prvs_avg_guess_p_6 + 0.05:
+            pass
+        else:
+            p_observer_loss += 1
+
+        if Constants.w2_prvs_avg_guess_p_7 - 0.05 <= p.w2_avg_guess_p_7 <= Constants.w2_prvs_avg_guess_p_7 + 0.05:
+            pass
+        else:
+            p_observer_loss += 1
+
+        if Constants.w2_prvs_avg_guess_p_8 - 0.05 <= p.w2_avg_guess_p_8 <= Constants.w2_prvs_avg_guess_p_8 + 0.05:
+            pass
+        else:
+            p_observer_loss += 1
+
+        if Constants.w2_prvs_avg_guess_p_9 - 0.05 <= p.w2_avg_guess_p_9 <= Constants.w2_prvs_avg_guess_p_9 + 0.05:
+            pass
+        else:
+            p_observer_loss += 1
+
+        if Constants.w2_prvs_avg_guess_p_10 - 0.05 <= p.w2_avg_guess_p_10 <= Constants.w2_prvs_avg_guess_p_10 + 0.05:
+            pass
+        else:
+            p_observer_loss += 1
+
+        if Constants.w2_prvs_avg_guess_p_11 - 0.05 <= p.w2_avg_guess_p_11 <= Constants.w2_prvs_avg_guess_p_11 + 0.05:
+            pass
+        else:
+            p_observer_loss += 1
+
+        if Constants.w2_prvs_avg_guess_p_12 - 0.05 <= p.w2_avg_guess_p_12 <= Constants.w2_prvs_avg_guess_p_12 + 0.05:
+            pass
+        else:
+            p_observer_loss += 1
+
+        if Constants.w2_prvs_avg_guess_p_13 - 0.05 <= p.w2_avg_guess_p_13 <= Constants.w2_prvs_avg_guess_p_13 + 0.05:
+            pass
+        else:
+            p_observer_loss += 1
+
+        if Constants.w2_prvs_avg_guess_p_14 - 0.05 <= p.w2_avg_guess_p_14 <= Constants.w2_prvs_avg_guess_p_14 + 0.05:
+            pass
+        else:
+            p_observer_loss += 1
+
+        if Constants.w2_prvs_avg_guess_p_15 - 0.05 <= p.w2_avg_guess_p_15 <= Constants.w2_prvs_avg_guess_p_15 + 0.05:
+            pass
+        else:
+            p_observer_loss += 1
+
+        be_p = 2 - Constants.dollar_per_ecu_observer * p_observer_loss
+        if be_p < 0:
+            p.payoff = 0
+        else:
+            p.payoff = be_p
+
+
+class BE_Avg_Guesser_Forest(Page):
+    def is_displayed(self):
+        return self.participant.vars['shb_role'] == 'Guesser'
+
+    form_model = 'player'
+    form_fields = ['w2_avg_s_n_p_1_5', 'w2_avg_s_n_p_6_9', 'w2_avg_s_n_p_10_14']
+
+    timeout_seconds = 210
+
+    def before_next_page(self):
+        p = self.player
+        timeout_happened = self.timeout_happened
+        import random
+        if timeout_happened:  # we use "timeout_happened" to decide what value gets submitted on user's behalf
+            p.w2_avg_s_n_p_1_5 = round(random.uniform(5,10),2)
+            p.w2_avg_s_n_p_6_9 = round(random.uniform(5,10),2)
+            p.w2_avg_s_n_p_10_14 = round(random.uniform(5,10),2)
+
+            print("<Time Out on Page:'BE_Avg_Guesser_Forest'>", "participant label:", p.participant.label,
+                  "participant id in sesh:", p.participant.id_in_session, "automated random answers:",
+                  p.w2_avg_s_n_p_1_5, p.w2_avg_s_n_p_6_9, p.w2_avg_s_n_p_10_14)
+
+
+class BE_Avg_Msg_Forest(Page):
+    def is_displayed(self):
+        return self.participant.vars['shb_role'] == 'Guesser'
+
+    form_model = 'player'
+    form_fields = ['w2_avg_msg_p']
+
+    timeout_seconds = 210
+
+    def before_next_page(self):
+        p = self.player
+        timeout_happened = self.timeout_happened
+        guesser_loss = 0
+        import random
+        if timeout_happened:  # we use "timeout_happened" to decide what value gets submitted on user's behalf
+            p.w2_avg_msg_p = round(random.uniform(0, 15), 2)
+
+            print("<Time Out on Page:'BE_Avg_Msg_Forest'>", "participant label:", p.participant.label,
+                  "participant id in sesh:", p.participant.id_in_session, "automated random answers:",
+                  p.w2_avg_msg_p)
+
+        ############################## AVERAGES ##############################
+        # Forest Secret Number
+        if Constants.w2_prvs_avg_s_n_p_1_5 - 0.05 <= p.w2_avg_s_n_p_1_5 <= Constants.w2_prvs_avg_s_n_p_1_5 + 0.05:
+            pass
+        else:
+            guesser_loss += 1
+
+        if Constants.w2_prvs_avg_s_n_p_6_9 - 0.05 <= p.w2_avg_s_n_p_6_9 <= Constants.w2_prvs_avg_s_n_p_6_9 + 0.05:
+            pass
+        else:
+            guesser_loss += 1
+
+        if Constants.w2_prvs_avg_s_n_p_10_14 - 0.05 <= p.w2_avg_s_n_p_10_14 <= Constants.w2_prvs_avg_s_n_p_10_14 + 0.05:
+            pass
+        else:
+            guesser_loss += 1
+
+        ############################## MESSAGES ##############################
+        # Forest Message
+        if Constants.w2_prvs_avg_msg_p - 0.05 <= p.w2_avg_msg_p <= Constants.w2_prvs_avg_msg_p + 0.05:
+            pass
+        else:
+            guesser_loss += 1
+
+        be_p = 2 - Constants.dollar_per_ecu_guesser * guesser_loss
+
+        if be_p < 0:
+            p.payoff = 0
+        else:
+            p.payoff = be_p
+
+class BE_Results(Page):
+    def vars_for_template(self):
+        return{
+            'belief_payoff': self.player.payoff
+        }
+
+    def before_next_page(self):
+        self.participant.vars['belief_payoff'] = self.player.payoff
+
+
+page_sequence = [BE_Intro_Guesser,
+                 BE_Intro_Observer,
+                 BE_Avg_Observer_Forest,
+                 BE_Avg_Guesser_Forest,
+                 BE_Avg_Msg_Forest,
+                 BE_Results
+                 ]

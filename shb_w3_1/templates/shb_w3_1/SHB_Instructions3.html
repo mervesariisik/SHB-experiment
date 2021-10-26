@@ -1,0 +1,154 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Part 1: Guessing the Secret Number
+{% endblock %}
+
+{% block content %}
+
+<style>
+    #rcorners {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 50%;
+  height: 30px;
+}
+
+        caption { caption-side:top; }
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 500px; /* Should be removed. Only for demonstration */
+}
+    table, td, th {
+  border: 1px solid #696969;
+}
+    table {
+  border-collapse: collapse;
+}
+.bottom-three {
+     margin-bottom: 3cm;
+  }
+p.ex1 {
+  margin-top: 20px;
+}
+
+p.ex2 {
+  margin-top: 120px;
+}
+p.ex3 {
+  margin-top: 30px;
+}
+
+p.ex4 {
+  margin-top: 90px;
+}
+hr.rounded {
+  border-top: 2px solid #bbb;
+  border-radius: 5px;
+}
+                div.r {
+  text-align: right;
+}
+    </style>
+
+<p>
+    <center>Secret Numbers and Color Numbers</center>
+</p>
+<p class="ex3">
+
+<ul>
+
+    <li>The <b><i>secret number</i></b> is one of the following: <b>5, 6, 7, 8, 9, 10</b>.</li>
+    </ul>
+    </p>
+
+    <p>
+<ul>
+<li>
+    The <i>color number</i> can be <u>zero, negative or positive</u>. To differentiate it, we put
+    parentheses around the <i>(color number)</i>. Specifically, it is one of the following:
+    (-5), (-4), (-3), (-2), (-1), (0), (+1), (+2), (+3), (+4), (+5).
+</li>
+    </ul>
+    </p>
+<p class="ex3">
+<hr class="rounded">
+</p>
+<p>
+
+    <center>Messages</center>
+
+</p>
+
+    <p class="ex3">
+    <center>
+    <div id="rcorners">
+
+    <center>
+        <i>Message = <b>secret number</b> + (color number)</i>
+    </center>
+
+        </div>
+    </center>
+
+    </p>
+
+<p>
+    Table below shows the list of all possible <i>Messages</i>. It also shows the <b><i>secret numbers</i></b>
+    and the corresponding <i>(color numbers)</i> that could generate each <i>Message</i>.
+</p>
+<p class="ex3">
+<hr class="rounded">
+</p>
+
+
+<div class="column">
+
+    <p class="ex3">
+
+For example:
+    </p>
+<p class="ex3">
+        <ul>
+
+    <li>
+        Message 1: <b>secret number</b> could be either be <b>5</b> or <b>6</b>
+    </li>
+</ul>
+    </p>
+    <p class="ex2">
+    <ul>
+    <li>Message 7: <b>secret number</b> could be <b>5</b>, <b>6</b>, <b>7</b>,
+        <b>8</b>, <b>9</b>, or <b>10</b>
+    </li>
+    </ul>
+    </p>
+    <p class="ex4">
+        <ul>
+    <li>
+        Message 12: <b>secret number</b> could be <b>7</b>, <b>8</b>, <b>9</b>, or <b>10</b>
+    </li>
+</ul>
+    </p>
+
+</div>
+<div class="column">
+
+    <p>
+    <img src="{% static "shb/messages.png" %}" width="400px"/>
+</p>
+</div>
+
+
+<p>
+<i>Above table will <u>also be available on your decision screens</u></i>.</p>
+<p>Click Next to proceed.</p>
+<div class="r">
+{% next_button %}
+</div>
+
+{% endblock %}

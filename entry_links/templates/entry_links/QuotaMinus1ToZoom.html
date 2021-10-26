@@ -1,0 +1,36 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    We have a last minute opening so we can now check you in!<br> Unique Zoom meeting link below:
+{% endblock %}
+
+{% block content %}
+
+<style>
+         p.ex4 {
+  margin-top: 60px;
+}
+</style>
+<p class="ex3">
+<a href="../html-link.htm" target="popup" onclick="myFunction()">
+    Click to open Zoom meeting in a new window.</a>
+    </p>
+
+<p class="ex3">
+    If the the Zoom link doesn't open, copy paste the below link on a NEW tab or window.
+</p>
+
+<p>
+    {{ zoom_link }}
+</p>
+
+
+<script type="text/javascript">
+    let x = js_vars.zoom_link;
+    function myFunction() {
+  window.open(x, 'name','width=600,height=400');
+}
+</script>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block content %}
+<style>
+    div.r {
+  text-align: right;
+}
+</style>
+<p>
+    The computer randomly selected <b>Situation {{ picked_line }}</b>.
+</p>
+
+<p> </p>
+
+{% if decision %}
+<p>
+    In this situation, you chose to have the <b>50-50 Lottery</b> .
+    Based on the lottery result, you receive <b> {{ payoff }}</b> from this game.
+</p>
+
+{% else %}
+<p>
+    In this situation, you chose to have the <b>Fixed Payoff</b>. You receive
+    <b>{{ payoff }}</b> from this game.
+</p>
+{% endif %}
+<p>
+    You have finished part 2. Now, you are about to go through two more very short parts.
+</p>
+<p>Click Next to proceed.</p>
+<div class="r">
+    {% next_button %}
+</div>
+
+{% endblock %}

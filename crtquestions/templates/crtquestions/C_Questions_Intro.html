@@ -1,0 +1,40 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Part 3: 3 Questions
+{% endblock %}
+
+{% block content %}
+<style>
+    div.r {
+  text-align: right;
+}
+    p.ex2 {
+        margin-top: 40px;
+    }
+</style>
+
+<p class="ex2">
+    This part will now present you with 3 Questions.
+</p>
+
+<p class="ex2">
+    For each correctly answered question, you will earn <b>${{ Constants.dollar_per_ecu }}</b>.
+</p>
+<p>
+Your earnings from this part will be added to your fixed reward and your earnings from other parts.
+</p>
+
+<p>
+    Note that you will have <b>a total of up to 3 minutes</b> to submit your answers for <u>all 3 questions</u>. <i>In
+    the case that you don't submit your answers within the allotted time, the computer will randomly answer the questions.</i>
+</p>
+<p>Click Next to proceed.</p>
+<div class="r">
+<p class="ex2">
+    {% next_button %}
+</p>
+</div>
+
+{% endblock %}

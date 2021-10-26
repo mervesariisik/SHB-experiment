@@ -1,0 +1,162 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Part 1: Guessing the Secret Number
+{% endblock %}
+
+{% block content %}
+
+<style>
+
+    #rcorners {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 100%;
+  height: 80px;
+}
+
+    p.ex1 {
+  margin-top: 20px;
+}
+        p.ex3 {
+  margin-top: 45px;
+}
+
+          .bottom-three {
+     margin-bottom: 3cm;
+  }
+
+        caption { caption-side:top; }
+
+         h6 {text-align: center;}
+         * {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  /*height: 270px; /* Should be removed. Only for demonstration */
+}
+    table, td, th {
+  border: 1px solid #696969;
+}
+    table {
+  border-collapse: collapse;
+}
+div.a {
+    font-size:13.5px;
+}
+                div.r {
+  text-align: right;
+}
+
+    hr.rounded {
+  border-top: 2px solid #bbb;
+  border-radius: 5px;
+}
+    p.ex2 {
+        margin-top: 30px;
+    }
+    </style>
+<p>
+    <center>Guesses</center>
+</p>
+<p class="ex2">
+
+    The Guessers can enter their <b>GUESS</b> of the <b>secret number</b> in <u>0.5 increments</u>:  <b>5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10</b>
+
+</p>
+<p>
+<hr class="rounded">
+</p>
+<p>
+    <center>
+    How are payoffs determined?
+    </center>
+</p>
+    <p>
+        The payoffs depend on the <b>GUESS</b> such that:
+</p>
+
+    <p>
+<div class="column">
+    <ul>
+        <li>the Observer earns <u>more when the <b>GUESS</b> is higher</u>
+</li>
+    </ul>
+    </div>
+     </p>
+
+
+    <p>
+<div class="column">
+    <ul>
+        <li>the Guesser earns <u>more when the <b>GUESS</b> is closer to the <b>secret number</b></u></li>
+    </ul>
+    </div>
+    </p>
+
+
+
+<p class="ex1">
+
+    The payoffs of this game are defined in terms of points as displayed in the tables below.
+
+</p>
+
+  <hr class="rounded">
+
+<p class="ex3">
+    For example, suppose <b>GUESS</b> is <b>6.5</b>
+
+    <div class="column">
+    <ul>
+        <li>the Observer gets 23 points <br>
+            (regardless of the <b>secret number</b>)
+</li>
+    </ul>
+    </div>
+     </p>
+
+
+    <p>
+<div class="column">
+    <ul>
+        <li>
+            if the <b>secret number</b> is <b>6</b>, the Guesser gets 104 points
+        </li>
+        <li>
+            if the <b>secret number</b> is <b>10</b>, the Guesser gets 23 points
+        </li>
+    </ul>
+    </div>
+
+</p>
+
+<p>
+<img src="{% static "shb/payoffs.png" %}" width="950px" />
+</p>
+
+<p>
+    <i>Payoff tables will <u>also be available on your decision screens</u>.</i>
+</p>
+ <hr class="rounded">
+
+<p class="ex2">
+    Your final earning from this part ("Guessing the Secret Number") will be calculated by converting the <u>TOTAL points you collect throughout the
+    {{Constants.num_rounds}} rounds into US dollars</u>. The rate at which points are worth US dollars will be shown on
+    the screen before the game begins.
+</p>
+
+
+
+
+<p>Click Next to proceed.</p>
+<div class="r">
+    {% next_button %}
+</div>
+{% endblock %}

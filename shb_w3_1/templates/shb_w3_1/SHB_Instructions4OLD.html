@@ -1,0 +1,111 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Part 1: Guessing the Secret Number
+{% endblock %}
+
+{% block content %}
+
+<style>
+    img {
+        width: 180px;
+        height: 180px;
+    }
+        p.ex1 {
+  margin-top: 25px;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  height: 350px; /* Should be removed. Only for demonstration */
+}
+.parent {
+  text-align: center;
+}
+.parent > ul {
+  display: inline-block;
+}
+                div.r {
+  text-align: right;
+}
+    </style>
+
+
+    <p>
+        <u>Each round</u>, the computer randomly picks the <b><i>secret number</i></b> such that <b>5, 6, 7, 8, 9,
+        10</b> are each <u>equally likely</u> to be selected.
+    </p>
+
+<p>
+    The selection procedure of the <i>color numbers</i> depends on the color groups. <b>Observers</b> belong to one of the two
+    color groups:
+<div class="parent">
+    <ul>
+    <li>
+        Sky color group
+    </li>
+    <li>
+        Forest color group
+    </li>
+</ul>
+</div>
+
+        <u>Each round and for every <b>observer</b></u>, the computer will spin the corresponding color group wheel to
+        determine the <i>color number</i>.
+    </p>
+<div class="column">
+    <center>
+        <p>
+    Sky color group wheel
+</p>
+    <img src="{% static "shb/sky_neg_five_parenthesis.png" %}"/>
+
+    </center>
+    <p>
+    <ul>
+        <li>half of the wheel is filled with the <i>color number</i>: (-5)</li>
+        <li>the other half of the wheel is filled with the rest of the <i>color numbers</i>:<br> (-4), (-3), (-2), (-1),
+            (0), (+1), (+2), (+3), (+4), (+5)</li>
+    </ul>
+    </p>
+
+</div>
+
+    <div class="column">
+        <center>
+            <p>
+    Forest color group wheel
+</p>
+    <img src="{% static "shb/forest_five_parenthesis.png" %}" />
+
+            </center>
+        <p>
+        <ul>
+            <li>half of the wheel is filled with the <i>color number</i>: (+5)</li>
+            <li>the other half of the half of the wheel is filled with the rest of the <i>color numbers</i>: <br>(-5),
+                (-4), (-3), (-2), (-1), (0), (+1), (+2), (+3), (+4)</li>
+            </ul>
+        </p>
+    </div>
+
+<p class="ex1">
+    <center>
+<i>Note that the above information will <u>also be available on your decision screens</u></i>.
+</center>
+</p>
+<p>
+    <b>Observers</b> are <u>equally likely</u> to be assigned to either color group. Color groups will be determined before the game begins and will be <u>fixed</u> throughout the entire game.
+    Each round, the <b>guessers</b> will see the color group of the observer they are matched with.
+</p>
+
+<div class="r">
+{% next_button %}
+</div>
+
+{% endblock %}

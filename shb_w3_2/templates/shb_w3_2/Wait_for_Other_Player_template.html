@@ -1,0 +1,19 @@
+{% extends 'otree/WaitPage.html' %}
+{% load static otree %}
+{% block title %}
+    Waiting for the Other Participant to start Round {{ player.round_number }}
+{% endblock %}
+{% block content %}
+    <p>
+        Note that waiting briefly between rounds is normal as you are randomly matched with participants each round.
+    </p>
+
+<p>
+    <b>If you are an Observer:</b> the Guesser you are matched with this round is finishing a previous round.
+</p>
+
+<p>
+    <b>If you are a Guesser:</b> the Observer you are matched with this round may be finishing a previous round or may be
+    making this round's decision.
+</p>
+{% endblock %}

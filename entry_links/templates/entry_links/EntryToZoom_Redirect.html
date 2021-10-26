@@ -1,0 +1,16 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Page title
+{% endblock %}
+
+{% block content %}
+<script type="text/javascript">
+    let x = js_vars.zoom_link;
+    window.location.replace(x)
+
+</script>
+    {% next_button %}
+
+{% endblock %}

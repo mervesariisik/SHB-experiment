@@ -1,0 +1,425 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Question Progress: Question 1 of 6
+{% endblock %}
+
+{% block content %}
+<style>
+
+    .column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+        height: 790px;
+}
+        table, td, th {
+  border: 1px solid #696969;
+}
+    table {
+  border-collapse: collapse;
+}
+        div.e {
+  text-indent: 200px;
+}
+            #rcorners {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 90%;
+  height: 27px;
+}
+
+        #rcornersmessages {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 100%;
+            height: 100%;
+}
+        #rcornerspayoffreminder {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 100%;
+        height: 190px;
+}
+#rcornerspayoffs {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 100%;
+    height: 290px;
+
+}
+        table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+        div.a {
+    font-size:13.5px;
+}
+            div.b {
+  text-indent: 20px;
+}
+            div.c {
+  text-indent: 80px;
+}
+            div.r {
+  text-align: right;
+}
+            p.ex1 {
+  margin-top: 30px;
+}
+             p.ex3 {
+  margin-top: 10px;
+}
+             p.ex4 {
+  margin-top: 60px;
+}
+             p.ex44 {
+  margin-top: 50px;
+}
+             p.ex444 {
+  margin-top: 22px;
+}
+            p.ex5 {
+  margin-top: 70px;
+}
+              p.ex6 {
+  margin-top: 187px;
+}
+             img {
+        width: 150px;
+        height: 150px;
+    }
+    caption { caption-side:top; }
+#col {
+  column-count: 2;
+}
+    div.absolute{
+        position: absolute;
+        bottom: 1px;
+    }
+    div.container1stcol{
+        height: 100%;
+        position: relative;
+    }
+</style>
+
+ <p>
+     <b>Question:</b> In the <u>1st round</u> of an experiment that was very similar to today's
+     experiment but <u>took place with other participants a few days ago</u>... If the Observers from <u>Sky color
+     group</u> did Not send a Message, what percentage had the following <b>secret numbers</b>?
+    </p>
+<p>
+    (Note that you will earn <b>${{ Constants.dollar_per_ecu_guesser }}</b> for each correct answer. Answers that are more
+    than <u>5% points away from the true values</u> are considered <u>incorrect</u>. True values are the realized values during the
+    first round of the experiment that took place a few days ago.)
+</p>
+
+<div class="column">
+    <div class="container1stcol">
+
+<p>
+    <i>Please enter percentages without a % sign. Your entries can be any value
+        between and including 0 and 100. (example: 58)
+</i>
+</p>
+        <p>
+    <i> Please enter a percentage for EVERY guess.  Your entries must add up to 100.
+</i>
+</p>
+
+<p class="ex5">
+    Percentage Left to Allocate: <input type="number" name="w2_s_n_perc_o_ND_leftover" value=100 id="pctleft">
+</p>
+
+
+<p>
+<table border=1 width=200>
+    <tr>
+      <th>5: </th>
+        <th><input type="number" name="w2_s_n_perc_o_ND_5" onchange="myFunction5()" onsubmit="validateForm()" id="pctfor5"></th>
+    </tr>
+  <tbody>
+    <tr>
+           <th>6: </th>
+        <th><input type="number" name="w2_s_n_perc_o_ND_6" onchange="myFunction5()" onsubmit="validateForm()" id="pctfor6"></th>
+    </tr>
+  <tr>
+      <th>7: </th>
+      <th><input type="number" name="w2_s_n_perc_o_ND_7" onchange="myFunction5()" onsubmit="validateForm()" id="pctfor7"></th>
+    </tr>
+  <tr>
+      <th>8: </th>
+      <th><input type="number" name="w2_s_n_perc_o_ND_8" onchange="myFunction5()" onsubmit="validateForm()" id="pctfor8"></th>
+    </tr>
+  <tr>
+      <th>9: </th>
+      <th><input type="number" name="w2_s_n_perc_o_ND_9" onchange="myFunction5()" onsubmit="validateForm()" id="pctfor9"></th>
+  </tr>
+  <tr>
+      <th>10: </th>
+      <th><input type="number" name="w2_s_n_perc_o_ND_10" onchange="myFunction5()" onsubmit="validateForm()" id="pctfor10"></th>
+  </tr>
+  </tbody>
+</table>
+</p>
+        <p>Click Next to submit.</p>
+
+    <div class="r">
+
+    {% next_button %}
+    </div>
+
+        </div>
+</div>
+
+<div class="column">
+    <div id="rcornersmessages">
+    <div class="a">
+    <p>
+<table border=1 class="center" width=400 height="200">
+  <thead>
+    <tr>
+        <td> </td>
+        <td colspan="6"><center> <b>secret number</b> <span style="font-size: 13px">(color number)</span></center></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td>Message 0: </td>
+        <td scope="row"> <b>5</b> <span style="font-size: 13px">(-5)</span></td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+    </tr>
+    <tr>
+        <td>Message 1:</td>
+        <td scope="row"> <b>5</b> <span style="font-size: 13px">(-4)</span></td>
+        <td scope="row"> <b>6</b> <span style="font-size: 13px">(-5)</span></td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+    </tr>
+    <tr>
+      <td>Message 2:</td>
+        <td scope="row"> <b>5</b> <span style="font-size: 13px">(-3)</span></td>
+        <td scope="row"> <b>6</b> <span style="font-size: 13px">(-4)</span></td>
+        <td scope="row"> <b>7</b> <span style="font-size: 13px">(-5)</span></td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+    </tr>
+  <tr>
+      <td>Message 3:</td>
+      <td scope="row"> <b>5</b> <span style="font-size: 13px">(-2)</span></td>
+      <td scope="row"> <b>6</b> <span style="font-size: 13px">(-3)</span></td>
+      <td scope="row"> <b>7</b> <span style="font-size: 13px">(-4)</span></td>
+      <td scope="row"> <b>8</b> <span style="font-size: 13px">(-5)</span></td>
+      <td bgcolor="#d3d3d3"> </td>
+      <td bgcolor="#d3d3d3"> </td>
+    </tr>
+  <tr>
+      <td>Message 4:</td>
+      <td scope="row"> <b>5</b> <span style="font-size: 13px">(-1)</span></td>
+      <td scope="row"> <b>6</b> <span style="font-size: 13px">(-2)</span></td>
+      <td scope="row"> <b>7</b> <span style="font-size: 13px">(-3)</span></td>
+      <td scope="row"> <b>8</b> <span style="font-size: 13px">(-4)</span></td>
+      <td scope="row"> <b>9</b> <span style="font-size: 13px">(-5)</span></td>
+      <td bgcolor="#d3d3d3"> </td>
+    </tr>
+  <tr>
+      <td>Message 5:</td>
+      <td scope="row"> <b>5</b> <span style="font-size: 13px">(0)</span></td>
+      <td scope="row"> <b>6</b> <span style="font-size: 13px">(-1)</span></td>
+      <td scope="row"> <b>7</b> <span style="font-size: 13px">(-2)</span></td>
+      <td scope="row"> <b>8</b> <span style="font-size: 13px">(-3)</span></td>
+      <td scope="row"> <b>9</b> <span style="font-size: 13px">(-4)</span></td>
+      <td scope="row"> <b>10</b> <span style="font-size: 13px">(-5)</span></td>
+    </tr>
+  <tr>
+      <td>Message 6:</td>
+      <td scope="row"> <b>5</b> <span style="font-size: 13px">(+1)</span></td>
+      <td scope="row"> <b>6</b> <span style="font-size: 13px">(0)</span></td>
+      <td scope="row"> <b>7</b> <span style="font-size: 13px">(-1)</span></td>
+      <td scope="row"> <b>8</b> <span style="font-size: 13px">(-2)</span></td>
+      <td scope="row"> <b>9</b> <span style="font-size: 13px">(-3)</span></td>
+      <td scope="row"> <b>10</b> <span style="font-size: 13px">(-4)</span></td>
+    </tr>
+  <tr>
+      <td>Message 7:</td>
+        <td scope="row"> <b>5</b> <span style="font-size: 13px">(+2)</span></td>
+        <td scope="row"> <b>6</b> <span style="font-size: 13px">(+1)</span></td>
+        <td scope="row"> <b>7</b> <span style="font-size: 13px">(0)</span></td>
+        <td scope="row"> <b>8</b> <span style="font-size: 13px">(-1)</span></td>
+        <td scope="row"> <b>9</b> <span style="font-size: 13px">(-2)</span></td>
+        <td scope="row"> <b>10</b> <span style="font-size: 13px">(-3)</span></td>
+    </tr>
+  <tr>
+      <td>Message 8:</td>
+        <td scope="row"> <b>5</b> <span style="font-size: 13px">(+3)</span></td>
+        <td scope="row"> <b>6</b> <span style="font-size: 13px">(+2)</span></td>
+        <td scope="row"> <b>7</b> <span style="font-size: 13px">(+1)</span></td>
+        <td scope="row"> <b>8</b> <span style="font-size: 13px">(0)</span></td>
+        <td scope="row"> <b>9</b> <span style="font-size: 13px">(-1)</span></td>
+        <td scope="row"> <b>10</b> <span style="font-size: 13px">(-2)</span></td>
+    </tr>
+  <tr>
+      <td>Message 9:</td>
+        <td scope="row"> <b>5</b> <span style="font-size: 13px">(+4)</span></td>
+        <td scope="row"> <b>6</b> <span style="font-size: 13px">(+3)</span></td>
+        <td scope="row"> <b>7</b> <span style="font-size: 13px">(+2)</span></td>
+        <td scope="row"> <b>8</b> <span style="font-size: 13px">(+1)</span></td>
+        <td scope="row"> <b>9</b> <span style="font-size: 13px">(0)</span></td>
+        <td scope="row"> <b>10</b> <span style="font-size: 13px">(-1)</span></td>
+    </tr>
+  <tr>
+      <td>Message 10:</td>
+        <td scope="row"> <b>5</b> <span style="font-size: 13px">(+5)</span></td>
+        <td scope="row"> <b>6</b> <span style="font-size: 13px">(+4)</span></td>
+        <td scope="row"> <b>7</b> <span style="font-size: 13px">(+3)</span></td>
+        <td scope="row"> <b>8</b> <span style="font-size: 13px">(+2)</span></td>
+        <td scope="row"> <b>9</b> <span style="font-size: 13px">(+1)</span></td>
+        <td scope="row"> <b>10</b> <span style="font-size: 13px">(0)</span></td>
+    </tr>
+  <tr>
+      <td>Message 11:</td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td scope="row"> <b>6</b> <span style="font-size: 13px">(+5)</span></td>
+        <td scope="row"> <b>7</b> <span style="font-size: 13px">(+4)</span></td>
+        <td scope="row"> <b>8</b> <span style="font-size: 13px">(+3)</span></td>
+        <td scope="row"> <b>9</b> <span style="font-size: 13px">(+2)</span></td>
+        <td scope="row"> <b>10</b> <span style="font-size: 13px">(+1)</span></td>
+    </tr>
+  <tr>
+      <td>Message 12:</td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td scope="row"> <b>7</b> <span style="font-size: 13px">(+5)</span></td>
+        <td scope="row"> <b>8</b> <span style="font-size: 13px">(+4)</span></td>
+        <td scope="row"> <b>9</b> <span style="font-size: 13px">(+3)</span></td>
+        <td scope="row"> <b>10</b> <span style="font-size: 13px">(+2)</span></td>
+    </tr>
+  <tr>
+      <td>Message 13:</td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td scope="row"> <b>8</b> <span style="font-size: 13px">(+5)</span></td>
+        <td scope="row"> <b>9</b> <span style="font-size: 13px">(+4)</span></td>
+        <td scope="row"> <b>10</b> <span style="font-size: 13px">(+3)</span></td>
+    </tr>
+  <tr>
+      <td>Message 14:</td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td scope="row"> <b>9</b> <span style="font-size: 13px">(+5)</span></td>
+        <td scope="row"> <b>10</b> <span style="font-size: 13px">(+4)</span></td>
+    </tr>
+  <tr>
+      <td>Message 15:</td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td scope="row"> <b>10</b> <span style="font-size: 13px">(+5)</span></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+</p>
+        <p>
+            <div class="a">
+            <center>
+    <div id="rcorners">
+
+        <i>message = <b>secret number</b> + (color number)</i>
+    </div>
+              </center>
+        </p>
+        </div>
+
+        <p class="ex3">
+            <center>
+        <div class="a">
+        <i><b>secret number</b></i> is equally likely to be one of the following:<br> <b>5, 6, 7, 8, 9, 10</b>
+        </p>
+        <p>
+            <i>(color number)</i> is determined by spinning the color group wheel <br> of the Observer:
+        </p>
+        </div>
+        </center>
+
+        </p>
+
+
+        <div id="col">
+            <center>
+                <div class="a">
+    Sky color group wheel
+                </div>
+            <img src="{% static "shb/sky_neg_five_parenthesis.png" %}"/>
+
+
+
+            </center>
+            <center>
+                <div class="a">
+    Forest color group wheel
+                </div>
+            <img src="{% static "shb/forest_five_parenthesis.png" %}" />
+
+                    </div>
+
+            </center>
+
+        </div>
+        </div>
+
+
+
+{% if form.w2_s_n_perc_o_ND_5.errors %}{{ form.w2_s_n_perc_o_ND_5.errors }}{% endif %}
+{% if form.w2_s_n_perc_o_ND_6.errors %}{{ form.w2_s_n_perc_o_ND_6.errors }}{% endif %}
+{% if form.w2_s_n_perc_o_ND_7.errors %}{{ form.w2_s_n_perc_o_ND_7.errors }}{% endif %}
+{% if form.w2_s_n_perc_o_ND_8.errors %}{{ form.w2_s_n_perc_o_ND_8.errors }}{% endif %}
+{% if form.w2_s_n_perc_o_ND_9.errors %}{{ form.w2_s_n_perc_o_ND_9.errors }}{% endif %}
+{% if form.w2_s_n_perc_o_ND_10.errors %}{{ form.w2_s_n_perc_o_ND_10.errors }}{% endif %}
+
+
+<script>
+
+
+    function myFunction5() {
+        const percent5 = document.getElementById("pctfor5").value;
+        const percent6 = document.getElementById("pctfor6").value;
+        const percent7 = document.getElementById("pctfor7").value;
+        const percent8 = document.getElementById("pctfor8").value;
+        const percent9 = document.getElementById("pctfor9").value;
+        const percent10 = document.getElementById("pctfor10").value;
+        document.getElementById("pctleft").value = 100 - percent5 - percent6 - percent7 - percent8 - percent9 - percent10
+    }
+    function validateForm() {
+        var percent5 = document.getElementById("pctfor5").value;
+        var percent6 = document.getElementById("pctfor6").value;
+        var percent7 = document.getElementById("pctfor7").value;
+        var percent8 = document.getElementById("pctfor8").value;
+        var percent9 = document.getElementById("pctfor9").value;
+        var percent10 = document.getElementById("pctfor10").value;
+        if (percent5 == null || percent6 == null || percent7 == null || percent8 == null || percent9 == null ||
+            percent10 == null) {
+            alert("Please enter enter a percentage for every secret number. Your entries can be any value including and " +
+                "between 0 and 100.");
+            return false;
+  }
+}
+
+
+</script>
+
+
+{% endblock %}

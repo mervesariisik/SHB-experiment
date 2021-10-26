@@ -1,0 +1,75 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Welcome and Thank you for Participating!
+{% endblock %}
+
+{% block content %}
+<style>
+    #rcornersmessages {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 100%;
+    height: 100%;
+}
+        div.b {
+  text-indent: 20px;
+}
+        p.ex2 {
+  margin-top: 50px;
+}
+        hr.rounded {
+  border-top: 2px solid #bbb;
+  border-radius: 5px;
+}
+</style>
+
+
+<p>
+    <b>Please silence and put away your cell phones now, as we need your full attention.</b>
+</p>
+
+
+<hr class="rounded">
+<p>
+<ul>
+    <li>
+        There are a total of <b>4 parts</b> in the experiment.
+        </li>
+    <p>
+        <ul>
+    <li>In the <b>first 3 parts</b>, you will make decisions that will <u>earn you money</u>.</li>
+    <li>In the <b>4th/final part</b>, you will complete a brief <u>follow-up survey</u>.
+</li>
+        </ul>
+    </p>
+
+</ul>
+</p>
+</p>
+<hr class="rounded">
+<p>
+
+
+    The researcher will read the instructions out loud and <u>explain the rules for the first part</u>. Please read and
+        progress through the instructions <b>together with the researcher.</b>
+    </p>
+
+<p>
+    If you have questions <u>at any point</u>, please feel free to stop the researcher and <b>use the Zoom chat box to
+    ask your questions</b>. Note that, before the game begins you will answer some <u>example questions
+    based on the instructions</u>.
+
+<p>Click Next to proceed.</p>
+    <div class="r">
+<p>
+    {% next_button %}
+</p>
+        </div>
+<style>
+                div.r {
+  text-align: right;
+}
+</style>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Part 2: Lottery Game
+{% endblock %}
+
+{% block content %}
+<style>
+    div.r {
+  text-align: right;
+}
+</style>
+<p>
+    You will now be presented with several Situations, each asking you to make a choice between two options:
+    <ol>
+    <li>
+        <b>50-50 Lottery</b> between 40 points or 0 points (each equally likely)
+    </li>
+    or
+    <li>
+        <b>Fixed Payoff</b> of a specific number of points
+    </li>
+</ol>
+</p>
+<p>
+When you have made all your choices, the computer will randomly select one Situation to determine your earning from this
+part.
+</p>
+<p>
+    In the selected Situation: if you chose the 50-50 Lottery, the computer will randomly pick 40 points or 0 points and if you
+chose the Fixed Payoff, you will receive the specified number of points.
+</p>
+
+<p>
+For every point you earned in the selected Situation, you will get $0.05. Your earnings from this part will be added to
+    your fixed reward and your earnings from other parts.
+</p>
+
+<p>
+    Note that you will have <b>up to 3 minutes</b> to submit <u>all your choices</u>. <i>In the case that you don't
+    submit your choices within the allotted time, the computer will submit random choices.</i>
+</p>
+
+<p>Click Next to proceed.</p>
+<div class="r">
+    {% next_button %}
+</div>
+{% endblock %}

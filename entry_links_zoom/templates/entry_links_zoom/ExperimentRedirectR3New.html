@@ -1,0 +1,20 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    You are being directed the the study...
+{% endblock %}
+
+{% block content %}
+
+<script type="text/javascript">
+    let x = js_vars.prolific_id;
+    let y = "https://shb-prolific.herokuapp.com/room/room_3";
+    let z = "?participant_label=";
+    let w = y.concat(z);
+    let q = w.concat(x);
+    window.location.replace(q)
+
+</script>
+
+{% endblock %}

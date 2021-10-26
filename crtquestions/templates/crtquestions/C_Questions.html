@@ -1,0 +1,27 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Part 3: 3 Questions
+{% endblock %}
+
+{% block content %}
+<style>
+
+    p.ex2 {
+        margin-top: 40px;
+    }
+    div.r {
+  text-align: right;
+}
+</style>
+{% formfields %}
+<p>Click Next to submit.</p>
+<div class="r">
+<p class="ex2">
+    {% next_button %}
+</p>
+</div>
+
+
+{% endblock %}

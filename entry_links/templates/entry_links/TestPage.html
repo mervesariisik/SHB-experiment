@@ -1,0 +1,646 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Browser Test Page: Please use the browser that properly shows this page in the experiment.
+{% endblock %}
+
+{% block content %}
+
+<style>
+
+    * {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+    height: 790px;
+}
+    table, td, th {
+  border: 1px solid #696969;
+}
+    table {
+  border-collapse: collapse;
+}
+img {
+        width: 150px;
+        height: 150px;
+    }
+#col {
+  column-count: 2;
+}
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Clear floats after the columns */
+#rcornersmessages {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 100%;
+    height: 100%;
+}
+    #rcornerspayoffreminder {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 100%;
+        height: 190px;
+}
+#rcornerspayoffs {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 100%;
+    height: 290px;
+
+}
+     caption { caption-side:top; }
+
+    #rcorners3 {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 100%;
+  height: 350px;
+}
+        #rcorners3a {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 100%;
+  height: 160px;
+}
+    #rcorners {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 90%;
+  height: 27px;
+}
+div.a {
+    font-size:13.5px;
+}
+    div.b {
+  text-indent: 20px;
+}
+    div.c {
+  text-indent: 80px;
+}
+    div.d {
+  text-indent: 90px;
+}
+    div.e {
+  text-indent: 150px;
+}
+        p.ex1 {
+  margin-top: 30px;
+}
+        p.ex2 {
+  margin-top: 50px;
+}
+     p.ex3 {
+  margin-top: 10px;
+}
+     p.ex4 {
+  margin-top: 60px;
+}
+     p.ex5 {
+  margin-top: 70px;
+}
+     p.ex6 {
+  margin-top: 187px;
+}
+     p.ex7{
+         margin-top: 80px;
+     }
+     p.ex8{
+         margin-top: 20px;
+     }
+     p.ex9{
+         margin-top: 40px;
+     }
+    div.r {
+  text-align: right;
+}
+    div.absolute{
+        position: absolute;
+        bottom: 1px;
+    }
+    div.container1stcol{
+        height: 100%;
+        position: relative;
+    }
+    hr.rounded {
+  border-top: 2px solid #bbb;
+  border-radius: 5px;
+}
+</style>
+
+<div class="column">
+    <div class="container1stcol">
+    <p>
+     Make sure you can properly view the entire page.
+    </p>
+    <p>
+    <hr class="rounded">
+    </p>
+    <p>
+        If page is distorted, please try to view with another browser.
+    </p>
+
+<div class="e">
+    <p>
+Indented Text
+    </p>
+    </div>
+<p class="ex8">
+    11 Zeros:
+    {% formfields %}
+</p>
+        <p>Test Page</p>
+<div class="absolute">
+    <div id="rcornerspayoffreminder">
+        <div class="a">
+        <div class="b">
+            <p class="ex1">
+                   Test Page
+            </p>
+
+            </div>
+        <ul>
+            <p>
+            <li>Test Page Test Page Test Page Test Page Test Page Test Page
+</li>
+    </p>
+    <p>
+    <li> Test Page Test Page Test Page Test Page</li>
+    </p>
+</ul>
+            </div>
+            <div class="c">
+                <span style="background-color: #FFFF00">Highlighted Text</span>
+            </div>
+
+        </div>
+</div>
+    </div>
+</div>
+
+<div class="column">
+    <div id="rcornersmessages">
+    <div class="a">
+    <p>
+<table border=1 class="center" width=400 height="200">
+  <thead>
+    <tr>
+        <td> </td>
+        <td colspan="6"><center> <b>Test Page</b> <span style="font-size: 13px">(Test Page)</span></center></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td>Test Page </td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+    </tr>
+    <tr>
+        <td>Test Page</td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+    </tr>
+    <tr>
+      <td>Test Page</td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+    </tr>
+  <tr>
+      <td>Test Page</td>
+      <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+      <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+      <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+      <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+      <td bgcolor="#d3d3d3"> </td>
+      <td bgcolor="#d3d3d3"> </td>
+    </tr>
+  <tr>
+      <td>Test Page</td>
+      <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+      <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+      <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+      <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+      <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+      <td bgcolor="#d3d3d3"> </td>
+    </tr>
+  <tr>
+      <td>Test Page</td>
+      <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+      <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+      <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+      <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+      <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+      <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+    </tr>
+  <tr>
+      <td>Test Page</td>
+      <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+      <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+      <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+      <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+      <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+      <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+    </tr>
+  <tr>
+      <td>Test Page</td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+    </tr>
+  <tr>
+      <td>Test Page</td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+    </tr>
+  <tr>
+      <td>Test Page</td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+    </tr>
+  <tr>
+      <td>Test Page</td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+    </tr>
+  <tr>
+      <td>Test Page</td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+    </tr>
+  <tr>
+      <td>Test Page</td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+    </tr>
+  <tr>
+      <td>Test Page</td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+    </tr>
+  <tr>
+      <td>Test Page</td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+    </tr>
+  <tr>
+      <td>Test Page</td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td scope="row"> <b>X</b> <span style="font-size: 13px">(X)</span></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+</p>
+        <p>
+            <div class="a">
+            <center>
+    <div id="rcorners">
+
+        <i>Test Page</i>
+    </div>
+              </center>
+        </p>
+        </div>
+
+        <p class="ex3">
+            <center>
+        <div class="a">
+        Test Page
+        </p>
+        <p>
+            Test Page
+        </p>
+        </div>
+        </center>
+
+        </p>
+
+
+        <div id="col">
+            <center>
+                <div class="a">
+    Test Page
+                </div>
+            <img src="{% static "shb/test_page_image.png" %}"/>
+
+
+
+            </center>
+            <center>
+                <div class="a">
+    Test Page
+                </div>
+            <img src="{% static "shb/test_page_image.png" %}" />
+
+                    </div>
+
+            </center>
+
+        </div>
+        </div>
+
+<div class="r">
+<p>
+
+    {% next_button %}
+     </p>
+</div>
+
+<p class="ex5">
+<div id="rcornerspayoffs">
+<div id="col">
+
+     <div class="a">
+<table border=1 class="center" width=400 id="observer and guesser payoffs">
+    <thead>
+    <caption><b>Test Page </b> <br> (Test Page) </caption>
+    <tr>
+      <th> </th>
+        <th> </th>
+      <th colspan="11"><center>Test Page</center></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th> </th>
+        <th> </th>
+      <th scope="row">X</th>
+      <th scope="row">X</th>
+      <th scope="row">X</th>
+      <th scope="row">X</th>
+      <th scope="row">X</th>
+      <th scope="row">X</th>
+      <th scope="row">X</th>
+      <th scope="row">X</th>
+      <th scope="row">X</th>
+      <th scope="row">X</th>
+      <th scope="row">X</th>
+    </tr>
+    <tr>
+        <th rowspan="6">Test<br>Page</th>
+      <th>X</th>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+    </tr>
+    <tr>
+      <th scope="row">X</th>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+    </tr>
+  <tr>
+      <th scope="row">X</th>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+    </tr>
+  <tr>
+      <th scope="row">X</th>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+    </tr>
+  <tr>
+      <th scope="row">X</th>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+    </tr>
+  <tr>
+      <th scope="row">X</th>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+    </tr>
+    </tbody>
+</table>
+    </div>
+
+
+
+        <div class="a">
+<table border=1 class="center" width=400>
+    <thead>
+    <caption><b>Test Page</b> <br>Test Page </caption>
+    <tr>
+      <th> </th>
+        <th> </th>
+      <th colspan="11"><center>Test Page</center></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th> </th>
+        <th> </th>
+      <th scope="row">X</th>
+      <th scope="row">X</th>
+      <th scope="row">X</th>
+      <th scope="row">X</th>
+      <th scope="row">X</th>
+      <th scope="row">X</th>
+      <th scope="row">X</th>
+      <th scope="row">X</th>
+      <th scope="row">X</th>
+      <th scope="row">X</th>
+      <th scope="row">X</th>
+    </tr>
+    <tr>
+        <th rowspan="6">Test<br>Page</th>
+      <th>X</th>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+    </tr>
+    <tr>
+      <th scope="row">X</th>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+    </tr>
+  <tr>
+      <th scope="row">X</th>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+    </tr>
+  <tr>
+      <th scope="row">X</th>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+    </tr>
+  <tr>
+      <th scope="row">X</th>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+    </tr>
+  <tr>
+      <th scope="row">X</th>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+    </tr>
+    </tbody>
+</table>
+</div>
+    </div>
+</div>
+</p>
+
+
+
+{% endblock %}

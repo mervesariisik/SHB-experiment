@@ -1,0 +1,41 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Part 1: Guessing the Secret Number
+{% endblock %}
+
+{% block content %}
+
+<p>
+Each round will proceed as follows:
+    <ol>
+    <li><u>For each <b>Observer-Guesser</b> pair</u> the computer will send a <i>"secret number"</i> and a <i>"color
+        number"</i> to the <b>Observer</b>. The sum of the secret number and the color number generates a
+        <i>"message"</i>. </i></li>
+    <p>
+    <li>The <b>Guesser</b> will only see the message.<br> <u>Note that the <b>Guesser</b> will never see the secret number or the color number.
+</u> </li>
+    </p>
+
+    <p>
+    <li>The <b>Guesser</b> will then <u>guess the value of the secret number</u>, concluding the round.</li>
+    </p>
+
+
+</ol>
+</p>
+
+
+<div class="r">
+<p>
+    {% next_button %}
+</p>
+        </div>
+<style>
+                div.r {
+  text-align: right;
+}
+</style>
+
+{% endblock %}

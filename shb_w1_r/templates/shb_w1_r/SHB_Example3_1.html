@@ -1,0 +1,358 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+     Example 3
+{% endblock %}
+
+{% block content %}
+
+<style xmlns="http://www.w3.org/1999/html">
+    * {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+    height: 790px;
+}
+    table, td, th {
+  border: 1px solid #696969;
+}
+    table {
+  border-collapse: collapse;
+}
+img {
+        width: 150px;
+        height: 150px;
+    }
+#col {
+  column-count: 2;
+}
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Clear floats after the columns */
+#rcornersmessages {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 100%;
+}
+    #rcornerspayoffreminder {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 100%;
+
+}
+#rcornersguesser {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 100%;
+  height: 450px;
+}
+     caption { caption-side:top; }
+
+    #rcorners3 {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 100%;
+  height: 350px;
+}
+        #rcorners3a {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 100%;
+  height: 160px;
+}
+    #rcorners {
+  border-radius: 25px;
+  border: 2px solid #000000;
+  width: 90%;
+  height: 27px;
+}
+div.a {
+    font-size:13.5px;
+}
+    div.b {
+  text-indent: 150px;
+}
+    div.d {
+  text-indent: 90px;
+}
+        p.ex1 {
+  margin-top: 30px;
+}
+     p.ex3 {
+  margin-top: 10px;
+}
+    div.r {
+  text-align: right;
+}
+ hr.rounded {
+  border-top: 2px solid #bbb;
+  border-radius: 5px;
+}
+</style>
+
+<div class="column">
+
+    <p>
+        The Observer from Sky color group observes:
+    <ul>
+    <li><b><i>secret number</i>: 10</b> </li>
+    <li><i>(color number)</i>: (+4)</li>
+</ul>
+    </p>
+<p>
+    which together add up to generate:
+    <ul>
+    <li>
+        Message 14
+    </li>
+</ul>
+</p>
+    <hr class="rounded">
+
+    <p>
+        Which <b>secret numbers</b> can generate Message 14? <br> (See table on the right)
+    </p>
+
+
+    {% formfield player.ex3_s_n_5 %}
+    {% formfield player.ex3_s_n_6 %}
+    {% formfield player.ex3_s_n_7 %}
+    {% formfield player.ex3_s_n_8 %}
+    {% formfield player.ex3_s_n_9 %}
+    {% formfield player.ex3_s_n_10 %}
+<p>Click Next to submit.</p>
+</div>
+
+<div class="column">
+
+    <div id="rcornersmessages">
+        <p>
+            <div class="a">
+            <center>
+    <div id="rcorners">
+
+        <i>Message = <b>secret number</b> + (color number)</i>
+	</div>
+              </center>
+
+        </p>
+
+        </div>
+    <div class="a">
+    <p>
+<table border=1 class="center" width=400 height="200">
+  <thead>
+    <tr>
+        <td> </td>
+        <td colspan="6"><center> <b>secret number</b> <span style="font-size: 13px">(color number)</span></center></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td>Message 0: </td>
+        <td scope="row"> <b>5</b> <span style="font-size: 13px">(-5)</span></td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+    </tr>
+    <tr>
+        <td>Message 1:</td>
+        <td scope="row"> <b>5</b> <span style="font-size: 13px">(-4)</span></td>
+        <td scope="row"> <b>6</b> <span style="font-size: 13px">(-5)</span></td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+    </tr>
+    <tr>
+      <td>Message 2:</td>
+        <td scope="row"> <b>5</b> <span style="font-size: 13px">(-3)</span></td>
+        <td scope="row"> <b>6</b> <span style="font-size: 13px">(-4)</span></td>
+        <td scope="row"> <b>7</b> <span style="font-size: 13px">(-5)</span></td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+    </tr>
+  <tr>
+      <td>Message 3:</td>
+      <td scope="row"> <b>5</b> <span style="font-size: 13px">(-2)</span></td>
+      <td scope="row"> <b>6</b> <span style="font-size: 13px">(-3)</span></td>
+      <td scope="row"> <b>7</b> <span style="font-size: 13px">(-4)</span></td>
+      <td scope="row"> <b>8</b> <span style="font-size: 13px">(-5)</span></td>
+      <td bgcolor="#d3d3d3"> </td>
+      <td bgcolor="#d3d3d3"> </td>
+    </tr>
+  <tr>
+      <td>Message 4:</td>
+      <td scope="row"> <b>5</b> <span style="font-size: 13px">(-1)</span></td>
+      <td scope="row"> <b>6</b> <span style="font-size: 13px">(-2)</span></td>
+      <td scope="row"> <b>7</b> <span style="font-size: 13px">(-3)</span></td>
+      <td scope="row"> <b>8</b> <span style="font-size: 13px">(-4)</span></td>
+      <td scope="row"> <b>9</b> <span style="font-size: 13px">(-5)</span></td>
+      <td bgcolor="#d3d3d3"> </td>
+    </tr>
+  <tr>
+      <td>Message 5:</td>
+      <td scope="row"> <b>5</b> <span style="font-size: 13px">(0)</span></td>
+      <td scope="row"> <b>6</b> <span style="font-size: 13px">(-1)</span></td>
+      <td scope="row"> <b>7</b> <span style="font-size: 13px">(-2)</span></td>
+      <td scope="row"> <b>8</b> <span style="font-size: 13px">(-3)</span></td>
+      <td scope="row"> <b>9</b> <span style="font-size: 13px">(-4)</span></td>
+      <td scope="row"> <b>10</b> <span style="font-size: 13px">(-5)</span></td>
+    </tr>
+  <tr>
+      <td>Message 6:</td>
+      <td scope="row"> <b>5</b> <span style="font-size: 13px">(+1)</span></td>
+      <td scope="row"> <b>6</b> <span style="font-size: 13px">(0)</span></td>
+      <td scope="row"> <b>7</b> <span style="font-size: 13px">(-1)</span></td>
+      <td scope="row"> <b>8</b> <span style="font-size: 13px">(-2)</span></td>
+      <td scope="row"> <b>9</b> <span style="font-size: 13px">(-3)</span></td>
+      <td scope="row"> <b>10</b> <span style="font-size: 13px">(-4)</span></td>
+    </tr>
+  <tr>
+      <td>Message 7:</td>
+        <td scope="row"> <b>5</b> <span style="font-size: 13px">(+2)</span></td>
+        <td scope="row"> <b>6</b> <span style="font-size: 13px">(+1)</span></td>
+        <td scope="row"> <b>7</b> <span style="font-size: 13px">(0)</span></td>
+        <td scope="row"> <b>8</b> <span style="font-size: 13px">(-1)</span></td>
+        <td scope="row"> <b>9</b> <span style="font-size: 13px">(-2)</span></td>
+        <td scope="row"> <b>10</b> <span style="font-size: 13px">(-3)</span></td>
+    </tr>
+  <tr>
+      <td>Message 8:</td>
+        <td scope="row"> <b>5</b> <span style="font-size: 13px">(+3)</span></td>
+        <td scope="row"> <b>6</b> <span style="font-size: 13px">(+2)</span></td>
+        <td scope="row"> <b>7</b> <span style="font-size: 13px">(+1)</span></td>
+        <td scope="row"> <b>8</b> <span style="font-size: 13px">(0)</span></td>
+        <td scope="row"> <b>9</b> <span style="font-size: 13px">(-1)</span></td>
+        <td scope="row"> <b>10</b> <span style="font-size: 13px">(-2)</span></td>
+    </tr>
+  <tr>
+      <td>Message 9:</td>
+        <td scope="row"> <b>5</b> <span style="font-size: 13px">(+4)</span></td>
+        <td scope="row"> <b>6</b> <span style="font-size: 13px">(+3)</span></td>
+        <td scope="row"> <b>7</b> <span style="font-size: 13px">(+2)</span></td>
+        <td scope="row"> <b>8</b> <span style="font-size: 13px">(+1)</span></td>
+        <td scope="row"> <b>9</b> <span style="font-size: 13px">(0)</span></td>
+        <td scope="row"> <b>10</b> <span style="font-size: 13px">(-1)</span></td>
+    </tr>
+  <tr>
+      <td>Message 10:</td>
+        <td scope="row"> <b>5</b> <span style="font-size: 13px">(+5)</span></td>
+        <td scope="row"> <b>6</b> <span style="font-size: 13px">(+4)</span></td>
+        <td scope="row"> <b>7</b> <span style="font-size: 13px">(+3)</span></td>
+        <td scope="row"> <b>8</b> <span style="font-size: 13px">(+2)</span></td>
+        <td scope="row"> <b>9</b> <span style="font-size: 13px">(+1)</span></td>
+        <td scope="row"> <b>10</b> <span style="font-size: 13px">(0)</span></td>
+    </tr>
+  <tr>
+      <td>Message 11:</td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td scope="row"> <b>6</b> <span style="font-size: 13px">(+5)</span></td>
+        <td scope="row"> <b>7</b> <span style="font-size: 13px">(+4)</span></td>
+        <td scope="row"> <b>8</b> <span style="font-size: 13px">(+3)</span></td>
+        <td scope="row"> <b>9</b> <span style="font-size: 13px">(+2)</span></td>
+        <td scope="row"> <b>10</b> <span style="font-size: 13px">(+1)</span></td>
+    </tr>
+  <tr>
+      <td>Message 12:</td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td scope="row"> <b>7</b> <span style="font-size: 13px">(+5)</span></td>
+        <td scope="row"> <b>8</b> <span style="font-size: 13px">(+4)</span></td>
+        <td scope="row"> <b>9</b> <span style="font-size: 13px">(+3)</span></td>
+        <td scope="row"> <b>10</b> <span style="font-size: 13px">(+2)</span></td>
+    </tr>
+  <tr>
+      <td>Message 13:</td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td scope="row"> <b>8</b> <span style="font-size: 13px">(+5)</span></td>
+        <td scope="row"> <b>9</b> <span style="font-size: 13px">(+4)</span></td>
+        <td scope="row"> <b>10</b> <span style="font-size: 13px">(+3)</span></td>
+    </tr>
+  <tr>
+      <td>Message 14:</td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td scope="row"> <b>9</b> <span style="font-size: 13px">(+5)</span></td>
+        <td scope="row"> <b>10</b> <span style="font-size: 13px">(+4)</span></td>
+    </tr>
+  <tr>
+      <td>Message 15:</td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td bgcolor="#d3d3d3"> </td>
+        <td scope="row"> <b>10</b> <span style="font-size: 13px">(+5)</span></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+</p>
+
+
+        <p class="ex3">
+            <center>
+        <div class="a">
+            <i><b>secret number</b></i> is equally likely to be one of the following:<br> <b>5, 6, 7, 8, 9, 10</b>
+        </p>
+        <p>
+            <i>(color number)</i> is determined by spinning the color group wheel <br> of the Observer:
+        </p>
+        </div>
+        </center>
+
+        </p>
+
+
+
+            <center>
+ <div class="a">
+    Sky color group wheel
+                </div>
+            <img src="{% static "shb/sky_neg_five_parenthesis.png" %}" />
+
+
+
+
+            </center>
+
+        </div>
+        </div>
+</div>
+
+
+    <div class="r">
+    <p class="ex1">
+
+        {% next_button %}
+
+    </p>
+
+
+    </div>
+
+
+
+</div>
+</div>
+
+
+
+{% endblock %}

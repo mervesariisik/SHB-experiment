@@ -1,0 +1,43 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Part 4: Total Earnings  (Next: Follow-up Questions)
+{% endblock %}
+
+{% block content %}
+<style>
+    div.r {
+  text-align: right;
+}
+</style>
+<p>
+    Your total earnings from the experiment is as follows:
+    <ol>
+    <li>
+        Part 1: You have earned <b>{{ shb_payoff }}</b>
+    </li>
+    <li>
+        Part 2: You have earned <b>{{ lottery_payoff }}</b>
+    </li>
+    <li>
+        Part 3: You have earned <b>{{ crt_payoff }}</b>
+    </li>
+    <li>
+        Fixed Reward: <b>$6.5</b>
+    </li>
+    <li>
+        Total Earning from the Experiment: <b>{{total_payoff}}</b>
+    </li>
+</ol>
+</p>
+
+<p>
+    Please proceed to answer a couple of follow-up questions.
+
+</p>
+<p>Click Next to proceed.</p>
+<div class="r">
+    {% next_button %}
+</div>
+{% endblock %}

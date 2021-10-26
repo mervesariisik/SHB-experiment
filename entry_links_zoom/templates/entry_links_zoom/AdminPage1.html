@@ -1,0 +1,26 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+
+{% block title %}
+    Stay on this page until everybody's checked in!
+{% endblock %}
+
+{% block content %}
+
+<p>
+  <b>Once it is 3 minutes past start time:</b>
+
+<ol>
+    <li>
+        <b>Advance</b> participants <b>once</b> to start the session (to put placeholders for no-shows)
+    </li>
+    <li>
+        <b>Click Next</b> to take attendance (based on acceptance to Zoom meeting) and to randomize them into rooms.
+    </li>
+</ol>
+</p>
+
+{% next_button %}
+
+{% endblock %}

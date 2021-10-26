@@ -1,0 +1,43 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Part 1: Guessing the Secret Number - Question
+{% endblock %}
+
+{% block content %}
+<style>
+  .bottom-three {
+     margin-bottom: 3cm;
+  }
+   p.ex1 {
+  margin-top: 30px;
+}
+  p.ex5 {
+  margin-top: 70px;
+}
+  div.r {
+  text-align: right;
+}
+</style>
+
+<p>
+   Before we move on to the next part, we ask you to answer the following 2 questions. When answering the question, please consider the <u>first round</u> of Guessing the Secret Number game from a
+    session that <u>took place with other participants a few days ago</u>.
+</p>
+
+
+<p class="ex5">
+    You can earn extra money with your answers.
+</p>
+
+<p class="ex5">
+    Note that you will have <b>up to 3.5 minutes</b> to submit your answer for <u>each question</u>. <i>In the case that you don't submit your answer within the allotted time, the computer will randomly answer.</i>
+</p>
+<p>Click Next to proceed.</p>
+<div class="r">
+<p class="ex5">
+    {% next_button %}
+</p>
+</div>
+{% endblock %}

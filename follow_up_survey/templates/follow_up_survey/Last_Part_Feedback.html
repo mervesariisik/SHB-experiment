@@ -1,0 +1,19 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Part 4: Follow-up Questions
+{% endblock %}
+
+{% block content %}
+<style>
+    div.r {
+  text-align: right;
+}
+</style>
+{% formfields %}
+<p>Click Next to proceed.</p>
+<div class="r">
+    {% next_button %}
+</div>
+{% endblock %}

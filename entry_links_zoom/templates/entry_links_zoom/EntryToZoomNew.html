@@ -1,0 +1,37 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    ZOOM LINK BELOW - DO NOT CLOSE THIS PAGE!
+{% endblock %}
+
+{% block content %}
+
+<style>
+         p.ex4 {
+  margin-top: 60px;
+}
+</style>
+<p><b>Please join the Zoom meeting as quickly as you can, we will check you in 1 by 1 before we can begin:</b></p>
+
+<p class="ex4">
+<a href="../html-link.htm" target="popup" onclick="myFunction()">
+    Do NOT close this page. <b>Click here</b> to open Zoom meeting in a NEW window.</a>
+    </p>
+
+<p class="ex4">
+    If the the Zoom link doesn't open, copy paste the below link on a NEW tab or window. (Do NOT close this page.)
+</p>
+
+<p>
+    {{ zoom_link }}
+</p>
+
+
+<script type="text/javascript">
+    let x = js_vars.zoom_link;
+    function myFunction() {
+  window.open(x, 'name','width=600,height=400');
+}
+</script>
+{% endblock %}
